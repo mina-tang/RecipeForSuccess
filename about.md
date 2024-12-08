@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About the project
+subtitle: Applied Data Analysis (CS-401), EPFL, 2024
 ---
 
 My name is Inigo Montoya. I have the following qualities:
