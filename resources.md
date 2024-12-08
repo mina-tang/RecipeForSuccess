@@ -2,7 +2,7 @@
 layout: page
 title: Resources
 subtitle: All datasets used in our project
-cover-img: /assets/img/magnifier.jpg
+cover-img: /assets/img/data_ai_gen.jpg
 ---
 
 Below you can find the links to all datasets used in our project.
