@@ -9,4 +9,6 @@ Great question! Our project aims to explore what leads to a movie's success, sta
 ### Why should I care?
 Are you thinking of making your own movie? You might discover just what you need to make your movie the biggest hit. Even if you're just passing by, stay! Browse our website, you might learn a thing or two. At the very least, you'll have enjoyed some beautiful graphs! 
 ### Your website is so amazing, how can I support you? 
-Your hapiness is the only contribution we need 😁
+Thank you for the compliment! Your hapiness is the only contribution we need 😊
+### How did you set up such a beautiful website?
+Thank you again for your kindness! We used [Beautiful Jekyll](https://github.com/daattali/beautiful-jekyll) as a basis for our website. Check them out! Their template is easy to use and very nice. 
