@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: The Recipe for Success
 subtitle: Uncovering the actors behind a hit movie
 cover-img: /assets/img/rouleau_film_resized.jpg
