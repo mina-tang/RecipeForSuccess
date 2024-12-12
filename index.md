@@ -26,7 +26,7 @@ Movies are not like books. They are rarely solitary tasks and often involve larg
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
 
-## Box Office Hit or Critic’s Darling? Can a Movie Have It All?
+## Box Office Hit or Critics' Darling? Can a Movie Have It All?
 --> to be good or to be successful 
 
 ## The Final Cut: What Did We Uncover? 
