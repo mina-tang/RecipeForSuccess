@@ -24,7 +24,7 @@ One last technicality is adjusting the box office for inflation. This step is es
 ## Behind the Scenes: Let's Take a Quick Tour of the Movies
 --> talk/put plots about the general trends, length type genre of movie that is the most successful
 
-<iframe src="assets/plot/test_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/test_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
