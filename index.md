@@ -26,12 +26,12 @@ One last technicality is adjusting the box office for inflation. This step is es
 
 Below we can visualize the runtime and release date distributions.
 
-<iframe src="assets/plots/movies_runtime.html" width="500px" height="500px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/movies_release_date.html" width="500px" height="500px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/movies_runtime.html" width="530px" height="530px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/movies_release_date.html" width="530px" height="530px" frameborder="0" position="relative"></iframe>
 Here is a test to put both images next to each other
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <iframe src="assets/plots/movies_runtime.html" width="500px" height="500px" frameborder="0"></iframe>
-  <iframe src="assets/plots/movies_release_date.html" width="500px" height="500px" frameborder="0"></iframe>
+  <iframe src="assets/plots/movies_runtime.html" width="530px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/movies_release_date.html" width="530px" height="530px" frameborder="0"></iframe>
 </div>
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
