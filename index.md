@@ -34,8 +34,8 @@ Below we can visualize the runtime, box office and release date distributions.
   <iframe src="assets/plots/actor_gender.html" width="300px" height="300px" frameborder="0"></iframe>
 </div>
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <iframe src="assets/plots/age_actor.html" width="375px" height="530px" frameborder="0"></iframe>
-  <iframe src="assets/plots/height_actor.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/age_actor.html" width="400px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/height_actor.html" width="400px" height="530px" frameborder="0"></iframe>
 </div>
 
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
