@@ -24,18 +24,19 @@ One last technicality is adjusting the box office for inflation. This step is es
 ## Behind the Scenes: Let's Take a Quick Tour of the Movies
 --> talk/put plots about the general trends, length type genre of movie that is the most successful
 
-Below we can visualize the runtime and release date distributions.
-
-<iframe src="assets/plots/movies_runtime.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/movies_release_date.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
-Here is a test to put both images next to each other
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <iframe src="assets/plots/movies_runtime.html" width="530px" height="530px" frameborder="0"></iframe>
-  <iframe src="assets/plots/movies_release_date.html" width="530px" height="530px" frameborder="0"></iframe>
-</div>
+Below we can visualize the runtime, box office and release date distributions.
+<iframe src="assets/plots/movies_numeric_features.html" width="750px" height="720px" frameborder="0" position="relative"></iframe>
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <iframe src="assets/plots/actor_ethnicity.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/actor_gender.html" width="375px" height="530px" frameborder="0"></iframe>
+</div>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <iframe src="assets/plots/age_actor.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/height_actor.html" width="375px" height="530px" frameborder="0"></iframe>
+</div>
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
