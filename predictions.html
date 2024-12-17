@@ -18,15 +18,31 @@ permalink: /movie-prediction/
                 <div class="form-group">
                     <label for="genre">Genre:</label>
 
-                    <select data-placeholder="Begin typing a genre to filter..." multiple class="chosen-select"
-                        id="genre" name="genre">
-                        <option value=""></option>
+                    <select id="choice" multiple="multiple">
                         <option value="action">Action</option>
                         <option value="comedy">Comedy</option>
                         <option value="drama">Drama</option>
                         <option value="horror">Horror</option>
+                        <option value="sciencefiction">Science Fiction</option>
+                        <option value="fantasy">Fantasy</option>
                         <option value="romance">Romance</option>
+                        <option value="doc">Documentary & Non-fiction</option>
+                        <option value="other">Other</option>
+
                     </select>
+                    <script type="text/javascript">
+
+                        var optionsToSelect = ['Action', 'Comedy', 'Drama', 'Horror', 'Science Fiction', 'Fantasy', 'Romance', 'Documentary & Non-fiction', 'Other'];
+                        var select = document.getElementById('choice');
+
+                        for (var i = 0, l = select.options.length, o; i < l; i++) {
+                            o = select.options[i];
+                            if (optionsToSelect.indexOf(o.text) != -1) {
+                                o.selected = true;
+                            }
+                        }
+
+                    </script>
                 </div>
 
                 <!-- Runtime -->
@@ -130,7 +146,3 @@ permalink: /movie-prediction/
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
