@@ -30,8 +30,7 @@ That's neat! We see that most of the movies have a runtime around 100 minutes, w
 
 We also investigate other characteristics of the movies, such as genres, languages and countries of production.
 <iframe src="assets/plots/genres_count.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/language_count.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/countries_count.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
+
 The three most common genres are drama, comedy and
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
