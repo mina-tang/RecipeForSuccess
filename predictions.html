@@ -4,207 +4,122 @@ title: Movie Prediction
 permalink: /movie-prediction/
 ---
 
-<head>
-    <title>Movie Prediction</title>
+<div class="container my-5">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h1 class="text-center mb-4 text-success">Predict Movie Rating and Box Office Revenue V1</h1>
+            <p class="text-center mb-4">Fill in the details below to predict the rating and box office revenue of the
+                movie.</p>
 
-    <!-- Add Bootstrap for a clean, modern look -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Movie Prediction Form -->
+            <form id="movie-form">
 
-    <style>
-        /* Custom page layout */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+                <!-- Genre -->
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <select id="genre" name="genre" class="form-control">
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </div>
 
-        /* Centering the form */
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+                <!-- Runtime -->
+                <div class="form-group">
+                    <label for="runtime">Runtime (minutes):</label>
+                    <input type="number" id="runtime" name="runtime" class="form-control" required>
+                </div>
 
-        /* Form Title */
-        h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #4CAF50;
-        }
+                <!-- Release Year -->
+                <div class="form-group">
+                    <label for="release-year">Release Year:</label>
+                    <input type="number" id="release-year" name="release-year" class="form-control" required>
+                </div>
 
-        h3 {
-            color: #2C3E50;
-            margin-top: 30px;
-        }
+                <hr class="my-4">
 
-        /* Form elements */
-        label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            display: inline-block;
-            color: #333;
-        }
+                <!-- Lead Actor 1 -->
+                <h3 class="text-center mb-3">Lead Actor 1</h3>
+                <div class="form-group">
+                    <label for="actor-gender-lead-actor1">Gender:</label>
+                    <select id="actor-gender-lead-actor1" name="actor-gender-lead-actor1" class="form-control">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-        input[type="number"],
-        input[type="text"],
-        input[type="date"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
+                <div class="form-group">
+                    <label for="actor-height-lead-actor1">Height (cm):</label>
+                    <input type="number" id="actor-height-lead-actor1" name="actor-height-lead-actor1"
+                        class="form-control" required>
+                </div>
 
-        /* Form submit button */
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 1.2rem;
-            padding: 12px;
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+                <div class="form-group">
+                    <label for="actor-age-at-release-lead-actor1">Age at Release:</label>
+                    <input type="number" id="actor-age-at-release-lead-actor1" name="actor-age-at-release-lead-actor1"
+                        class="form-control" required>
+                </div>
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+                <div class="form-group">
+                    <label for="actor-ethnicity-lead-actor1">Ethnicity:</label>
+                    <select id="actor-ethnicity-lead-actor1" name="actor-ethnicity-lead-actor1" class="form-control"
+                        required>
+                        <option value="asian">Asian</option>
+                        <option value="black">Black</option>
+                        <option value="caucasian">Caucasian</option>
+                        <option value="hispanic">Hispanic</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-        /* Section divider */
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 20px 0;
-        }
+                <hr class="my-4">
 
-        /* Adjusting the form container's margins */
-        .form-group {
-            margin-bottom: 20px;
-        }
+                <!-- Lead Actor 2 -->
+                <h3 class="text-center mb-3">Lead Actor 2</h3>
+                <div class="form-group">
+                    <label for="actor-gender-lead-actor2">Gender:</label>
+                    <select id="actor-gender-lead-actor2" name="actor-gender-lead-actor2" class="form-control">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-        /* Prediction result styling */
-        #prediction-result {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 1.2rem;
-            color: #2C3E50;
-        }
-    </style>
-</head>
+                <div class="form-group">
+                    <label for="actor-height-lead-actor2">Height (cm):</label>
+                    <input type="number" id="actor-height-lead-actor2" name="actor-height-lead-actor2"
+                        class="form-control" required>
+                </div>
 
-<div class="container">
-    <h1>Predict Movie Rating and Box Office Revenue</h1>
-    <p>Fill in the details below to predict the rating and box office revenue of the movie.</p>
+                <div class="form-group">
+                    <label for="actor-age-at-release-lead-actor2">Age at Release:</label>
+                    <input type="number" id="actor-age-at-release-lead-actor2" name="actor-age-at-release-lead-actor2"
+                        class="form-control" required>
+                </div>
 
-    <form id="movie-form">
-        <div class="form-group">
-            <label for="genre">Genre:</label>
-            <select id="genre" name="genre" class="form-control">
-                <option value="action">Action</option>
-                <option value="comedy">Comedy</option>
-                <option value="drama">Drama</option>
-                <option value="horror">Horror</option>
-                <option value="romance">Romance</option>
-            </select>
+                <div class="form-group">
+                    <label for="actor-ethnicity-lead-actor2">Ethnicity:</label>
+                    <select id="actor-ethnicity-lead-actor2" name="actor-ethnicity-lead-actor2" class="form-control"
+                        required>
+                        <option value="asian">Asian</option>
+                        <option value="black">Black</option>
+                        <option value="caucasian">Caucasian</option>
+                        <option value="hispanic">Hispanic</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-lg btn-primary btn-block mt-4">Predict</button>
+            </form>
+
+            <!-- Prediction Result -->
+            <p id="prediction-result" class="text-center mt-4"></p>
         </div>
-
-        <div class="form-group">
-            <label for="runtime">Runtime (minutes):</label>
-            <input type="number" id="runtime" name="runtime" class="form-control" required>
-        </div>
-
-        <div class="form-group">
-            <label for="release-year">Release Year:</label>
-            <input type="number" id="release-year" name="release-year" class="form-control" required>
-        </div>
-
-        <hr>
-
-        <h3>Lead Actor 1</h3>
-
-        <div class="form-group">
-            <label for="actor-gender-lead-actor1">Gender:</label>
-            <select id="actor-gender-lead-actor1" name="actor-gender-lead-actor1" class="form-control">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="actor-height-lead-actor1">Height (cm):</label>
-            <input type="number" id="actor-height-lead-actor1" name="actor-height-lead-actor1" class="form-control"
-                required>
-        </div>
-
-        <div class="form-group">
-            <label for="actor-age-at-release-lead-actor1">Age at Release:</label>
-            <input type="number" id="actor-age-at-release-lead-actor1" name="actor-age-at-release-lead-actor1"
-                class="form-control" required>
-        </div>
-
-        <div class="form-group">
-            <label for="actor-ethnicity-lead-actor1">Ethnicity:</label>
-            <select id="actor-ethnicity-lead-actor1" name="actor-ethnicity-lead-actor1" class="form-control" required>
-                <option value="asian">Asian</option>
-                <option value="black">Black</option>
-                <option value="caucasian">Caucasian</option>
-                <option value="hispanic">Hispanic</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <hr>
-
-        <h3>Lead Actor 2</h3>
-
-        <div class="form-group">
-            <label for="actor-gender-lead-actor2">Gender:</label>
-            <select id="actor-gender-lead-actor2" name="actor-gender-lead-actor2" class="form-control">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="actor-height-lead-actor2">Height (cm):</label>
-            <input type="number" id="actor-height-lead-actor2" name="actor-height-lead-actor2" class="form-control"
-                required>
-        </div>
-
-        <div class="form-group">
-            <label for="actor-age-at-release-lead-actor2">Age at Release:</label>
-            <input type="number" id="actor-age-at-release-lead-actor2" name="actor-age-at-release-lead-actor2"
-                class="form-control" required>
-        </div>
-
-        <div class="form-group">
-            <label for="actor-ethnicity-lead-actor2">Ethnicity:</label>
-            <select id="actor-ethnicity-lead-actor2" name="actor-ethnicity-lead-actor2" class="form-control" required>
-                <option value="asian">Asian</option>
-                <option value="black">Black</option>
-                <option value="caucasian">Caucasian</option>
-                <option value="hispanic">Hispanic</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <input type="submit" value="Predict" class="btn btn-success">
-    </form>
-
-    <p id="prediction-result"></p>
+    </div>
 </div>
 
 <!-- Bootstrap JS (for better interactivity) -->
