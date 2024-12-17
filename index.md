@@ -30,8 +30,8 @@ Below we can visualize the runtime, box office and release date distributions.
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <iframe src="assets/plots/actor_ethnicity.html" width="375px" height="530px" frameborder="0"></iframe>
-  <iframe src="assets/plots/actor_gender.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/actor_ethnicity.html" width="450px" height="450px" frameborder="0"></iframe>
+  <iframe src="assets/plots/actor_gender.html" width="300px" height="300px" frameborder="0"></iframe>
 </div>
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/age_actor.html" width="375px" height="530px" frameborder="0"></iframe>
