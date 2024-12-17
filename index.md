@@ -25,7 +25,7 @@ One last technicality is adjusting the box office for inflation. This step is es
 --> talk/put plots about the general trends, length type genre of movie that is the most successful
 
 Below we can visualize the runtime, box office and release date distributions.
-<iframe src="assets/plots/movies_numeric_features.html" width="750px" height="750px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/movies_numeric_features.html" width="750px" height="720px" frameborder="0" position="relative"></iframe>
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
