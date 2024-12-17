@@ -22,6 +22,7 @@ author: AuthenticDataAddicts
 
 navbar-links:
   About: "about"
+  Success prediction: "predictions"
   Resources:
     - The datasets: "resources"
 
