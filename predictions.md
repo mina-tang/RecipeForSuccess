@@ -9,9 +9,6 @@ permalink: /movie-prediction/
 Fill in the details below to predict the rating and box office revenue of the movie.
 
 <form id="movie-form">
-  <label for="movie-name">Movie Name:</label>
-  <input type="text" id="movie-name" name="movie-name" required><br><br>
-
   <label for="genre">Genre:</label>
   <select id="genre" name="genre">
     <option value="action">Action</option>
@@ -23,9 +20,6 @@ Fill in the details below to predict the rating and box office revenue of the mo
 
   <label for="runtime">Runtime (minutes):</label>
   <input type="number" id="runtime" name="runtime" required><br><br>
-
-  <label for="budget">Budget ($):</label>
-  <input type="number" id="budget" name="budget" required><br><br>
 
   <label for="release-year">Release Year:</label>
   <input type="number" id="release-year" name="release-year" required><br><br>
@@ -43,9 +37,6 @@ Fill in the details below to predict the rating and box office revenue of the mo
 
   <label for="actor-height-lead-actor1">Height (cm):</label>
   <input type="number" id="actor-height-lead-actor1" name="actor-height-lead-actor1" required><br><br>
-
-  <label for="actor-dob-lead-actor1">Date of Birth (YYYY-MM-DD):</label>
-  <input type="date" id="actor-dob-lead-actor1" name="actor-dob-lead-actor1" required><br><br>
 
   <label for="actor-age-at-release-lead-actor1">Age at Release:</label>
   <input type="number" id="actor-age-at-release-lead-actor1" name="actor-age-at-release-lead-actor1" required><br><br>
@@ -72,9 +63,6 @@ Fill in the details below to predict the rating and box office revenue of the mo
 
   <label for="actor-height-lead-actor2">Height (cm):</label>
   <input type="number" id="actor-height-lead-actor2" name="actor-height-lead-actor2" required><br><br>
-
-  <label for="actor-dob-lead-actor2">Date of Birth (YYYY-MM-DD):</label>
-  <input type="date" id="actor-dob-lead-actor2" name="actor-dob-lead-actor2" required><br><br>
 
   <label for="actor-age-at-release-lead-actor2">Age at Release:</label>
   <input type="number" id="actor-age-at-release-lead-actor2" name="actor-age-at-release-lead-actor2" required><br><br>
