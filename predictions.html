@@ -7,7 +7,7 @@ permalink: /movie-prediction/
 <div class="container my-5">
     <div class="card shadow-lg">
         <div class="card-body">
-            <h1 class="text-center mb-4">Predict Movie Rating and Box Office Revenue </h1>
+            <h1 class="text-center mb-4">Predict Movie Rating and Box Office Revenue V5</h1>
             <p class="text-center mb-4">Fill in the details below to predict the rating and box office revenue of your
                 movie.</p>
 
@@ -17,7 +17,10 @@ permalink: /movie-prediction/
                 <!-- Genre -->
                 <div class="form-group">
                     <label for="genre">Genre:</label>
-                    <select multiple id="genre" name="genre" class="form-control">
+
+                    <select data-placeholder="Begin typing a genre to filter..." multiple class="chosen-select"
+                        id="genre" name="genre">
+                        <option value=""></option>
                         <option value="action">Action</option>
                         <option value="comedy">Comedy</option>
                         <option value="drama">Drama</option>
@@ -127,3 +130,7 @@ permalink: /movie-prediction/
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
