@@ -31,9 +31,11 @@ That's neat! We see that most of the movies have a runtime around 100 minutes, w
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <iframe src="assets/plots/actor_ethnicity.html" width="530py" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/actor_gender.html" width="530px" height="530px" frameborder="0"></iframe>
+<div>
 
-<iframe src="assets/plots/actor_ethnicity.html" width="530py" height="530px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/actor_gender.html" width="530px" height="530px" frameborder="0" position="relative"></iframe>
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/age_actor.html" width="375px" height="530px" frameborder="0"></iframe>
   <iframe src="assets/plots/height_actor.html" width="375px" height="400px" frameborder="0"></iframe>
