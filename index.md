@@ -38,6 +38,10 @@ Below we can visualize the runtime, box office and release date distributions.
   <iframe src="assets/plots/height_actor.html" width="375px" height="530px" frameborder="0"></iframe>
 </div>
 
+<iframe src="assets/plots/cluster_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+
+
+
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
 
