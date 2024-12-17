@@ -29,6 +29,14 @@ Below we can visualize the runtime, box office and release date distributions.
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <iframe src="assets/plots/actor_ethnicity.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/actor_gender.html" width="375px" height="530px" frameborder="0"></iframe>
+</div>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <iframe src="assets/plots/age_actor.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/height_actor.html" width="375px" height="530px" frameborder="0"></iframe>
+</div>
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre

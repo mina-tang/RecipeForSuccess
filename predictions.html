@@ -7,7 +7,7 @@ permalink: /movie-prediction/
 <div class="container my-5">
     <div class="card shadow-lg">
         <div class="card-body">
-            <h1 class="text-center mb-4">Predict Movie Rating and Box Office Revenue </h1>
+            <h1 class="text-center mb-4">Predict Movie Rating and Box Office Revenue V5</h1>
             <p class="text-center mb-4">Fill in the details below to predict the rating and box office revenue of your
                 movie.</p>
 
@@ -17,13 +17,32 @@ permalink: /movie-prediction/
                 <!-- Genre -->
                 <div class="form-group">
                     <label for="genre">Genre:</label>
-                    <select id="genre" name="genre" class="form-control">
+
+                    <select id="choice" multiple="multiple">
                         <option value="action">Action</option>
                         <option value="comedy">Comedy</option>
                         <option value="drama">Drama</option>
                         <option value="horror">Horror</option>
+                        <option value="sciencefiction">Science Fiction</option>
+                        <option value="fantasy">Fantasy</option>
                         <option value="romance">Romance</option>
+                        <option value="doc">Documentary & Non-fiction</option>
+                        <option value="other">Other</option>
+
                     </select>
+                    <script type="text/javascript">
+
+                        var optionsToSelect = ['Action', 'Comedy', 'Drama', 'Horror', 'Science Fiction', 'Fantasy', 'Romance', 'Documentary & Non-fiction', 'Other'];
+                        var select = document.getElementById('choice');
+
+                        for (var i = 0, l = select.options.length, o; i < l; i++) {
+                            o = select.options[i];
+                            if (optionsToSelect.indexOf(o.text) != -1) {
+                                o.selected = true;
+                            }
+                        }
+
+                    </script>
                 </div>
 
                 <!-- Runtime -->
