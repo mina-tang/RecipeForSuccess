@@ -26,6 +26,8 @@ One last technicality is adjusting the box office for inflation. This step is es
 
 Below we can visualize the runtime, box office and release date distributions.
 <iframe src="assets/plots/movies_numeric_features.html" width="750px" height="720px" frameborder="0" position="relative"></iframe>
+That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we later adjust the box office with the inflation.
+
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
