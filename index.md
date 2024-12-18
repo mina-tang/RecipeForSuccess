@@ -31,24 +31,33 @@ That's neat! We see that most of the movies have a runtime around 100 minutes, w
 We also investigate other characteristics of the movies, such as genres, languages and countries of production.
 
 <iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+The three most common genres are drama, comedy and thriller. 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/language_count.html" width="375" height="450px" frameborder="0"></iframe>
   <iframe src="assets/plots/countries_count.html" width="375" height="450px" frameborder="0"></iframe>
 </div>
 
-The three most common genres are drama, comedy and thriller. As we could expect, the most common language is English and the two most common countries are US and UK. We see that french and France are also well represented in our dataset, they come right after.
+As we could expect, the most common language is English and the two most common countries are US and UK. We see that french and France are also well represented in our dataset, they come right after.
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
+Now that we had an overview of the movies, let's investigate the actors and actresses in them!
 
+We can visualize the most common ethnicities, and compare between all actors and the lead actors:
 <iframe src="assets/plots/pie_actor_ethnicity.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
 
+Here we compare the gender distribution:
+<iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
+We see a clear imbalance: almost two thirds of the actors are male, and the same trends is seen among the lead cast as well. Interesting... 
+
+Finally here are the distributions of some physical characteristics of the cast, comparing between lead actors and all actors:
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/age_actor_lead.html" width="300" height="500px" frameborder="0"></iframe>
   <iframe src="assets/plots/height_actor_lead.html" width="450" height="500px" frameborder="0"></iframe>
 </div>
+For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors.
 
+TODO explain this plot
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 
 
