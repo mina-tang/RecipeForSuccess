@@ -31,8 +31,10 @@ That's neat! We see that most of the movies have a runtime around 100 minutes, w
 We also investigate other characteristics of the movies, such as genres, languages and countries of production.
 
 <iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/language_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/countries_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <iframe src="assets/plots/language_count.html" width="375" height="450px" frameborder="0"></iframe>
+  <iframe src="assets/plots/countries_count.html" width="375" height="450px" frameborder="0"></iframe>
+</div>
 
 The three most common genres are drama, comedy and thriller. As we could expect, the most common language is English and the two most common countries are US and UK. We see that french and France are also well represented in our dataset, they come right after.
 
