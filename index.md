@@ -39,8 +39,8 @@ The three most common genres are drama, comedy and thriller. As we could expect,
 <iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <iframe src="assets/plots/age_actor_lead.html" width="375px" height="300px" frameborder="0"></iframe>
-  <iframe src="assets/plots/height_actor_lead.html" width="375px" height="450px" frameborder="0"></iframe>
+  <iframe src="assets/plots/age_actor_lead.html" width="300" height="500px" frameborder="0"></iframe>
+  <iframe src="assets/plots/height_actor_lead.html" width="450" height="500px" frameborder="0"></iframe>
 </div>
 
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
