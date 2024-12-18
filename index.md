@@ -31,7 +31,7 @@ That's neat! We see that most of the movies have a runtime around 100 minutes, w
 We also investigate other characteristics of the movies, such as genres, languages and countries of production.
 
 <iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
-The three most common genres are drama, comedy and thriller. 
+The three most common genres are drama , comedy and thriller. 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/language_count.html" width="375" height="450px" frameborder="0"></iframe>
   <iframe src="assets/plots/countries_count.html" width="375" height="450px" frameborder="0"></iframe>
@@ -63,6 +63,8 @@ TODO explain this plot
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
+
+There are all types of movies, we saw that the most common are drama and comedy, but do the genres make a difference in terms of success? That's what we'll study now!
 
 ## Box Office Hit or Critics' Darling? Can a Movie Have It All?
 --> to be good or to be successful 
