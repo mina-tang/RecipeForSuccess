@@ -36,11 +36,11 @@ The three most common genres are drama, comedy and thriller. As we could expect,
 --> talk about gender, ethnicity, height, and see how this affects things overall
 
 <iframe src="assets/plots/actor_ethnicity.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
-<iframe src="assets/plots/actor_gender.html" width="300px" height="350px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/actor_lead_gender.html" width="300px" height="350px" frameborder="0" position="relative"></iframe>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <iframe src="assets/plots/age_actor.html" width="375px" height="530px" frameborder="0"></iframe>
-  <iframe src="assets/plots/height_actor.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/age_actor_lead.html" width="375px" height="530px" frameborder="0"></iframe>
+  <iframe src="assets/plots/height_actor_lead.html" width="375px" height="530px" frameborder="0"></iframe>
 </div>
 
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
