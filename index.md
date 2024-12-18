@@ -29,8 +29,11 @@ Below we can visualize the runtime, box office and release date distributions.
 That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we later adjust the box office with the inflation.
 
 We also investigate other characteristics of the movies, such as genres, languages and countries of production.
- TODO PUT GRAPHS
- <iframe src="assets/plots/genres_count.html" width="750px" height="550px" frameborder="0" position="relative"></iframe>
+
+<iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/language_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/countries_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+
 The three most common genres are drama, comedy and thriller. As we could expect, the most common language is English and the two most common countries are US and UK. We see that french and France are also well represented in our dataset, they come right after.
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
