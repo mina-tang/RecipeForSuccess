@@ -59,7 +59,7 @@ For both age and height, we see that the trend among the lead actors is quite si
 
 TODO explain this plot
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
-
+<iframe src="assets/plots/inflation.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
