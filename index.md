@@ -48,23 +48,22 @@ All these movies produced, from so many countries and in so many languages, but 
 
 Quite impressive actually! A median rating of [insert rating] with on average of [insert number of votes] votes! Looks like there are a lot of high quality movies out there. 
 
-## Stars of the Show: It's Time to Explore the Leading Cast!
---> talk about gender, ethnicity, height, and see how this affects things overall
-Now that we had an overview of the movies, let's investigate the actors and actresses in them!
+## Stars of the Show: It's Time to Explore the Leading Cast! 💫
+Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics.  
 
-We can visualize the most common ethnicities, and compare between all actors and the lead actors:
 <iframe src="assets/plots/pie_actor_ethnicity.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
 
-Here we compare the gender distribution:
-<iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
-We see a clear imbalance: almost two thirds of the actors are male, and the same trends is seen among the lead cast as well. Interesting... 
+You can see that African Americans are 20.4% of all actors in movies, whereas they only represent 14.4% of the leading cast. The percentages in the leading cast are also not even in the top 10 for White People and Indians, whereas they feature in the top 10 for all actors. German Americans go from not even being included in the all actors pie chart, to 5.42% in the lead actors pie chart. Wow, Meryl Streep doing the heavy lifting! These disparities are most likely due to a combination of casting bias, but also it is possible that we do not have much information on leading actors in Indian movies, for example. 
 
-Finally here are the distributions of some physical characteristics of the cast, comparing between lead actors and all actors:
+We can see that the changes are not that drastic when it comes to gender. Whether in leading roles or in all roles, men represent about two thirds of all actors. Pretty sure in the general population it's 50/50, just saying...
+<iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
+
+Hang in there, we're almost done with this part! Finally, here are the distributions of some physical characteristics of the cast, with a comparison between lead actors and all actors:
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/age_actor_lead.html" width="300" height="500px" frameborder="0"></iframe>
   <iframe src="assets/plots/height_actor_lead.html" width="450" height="500px" frameborder="0"></iframe>
 </div>
-For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors.
+For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors. Actors on young but not too young, tall but not too tall... 
 
 TODO explain this plot
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
