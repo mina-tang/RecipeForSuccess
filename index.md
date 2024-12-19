@@ -61,7 +61,11 @@ TODO explain this plot
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 
 Due to the difference of numbers of movies across the years and [TODO?] to the correlation between the release date and the revenue of the movie, we adjust the revenue for inflation.
+On the left, we show the average box offices for only the top 10 movies of the year, and on the right for all of them.
 <iframe src="assets/plots/inflation.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+Let's try to understand theses graphs. For the top 10 movies, we see a clear trend (in both adjusted and unadjusted box office) that the average revenue becomes higher among the year.
+This means recent hit movies have a better commercial success than older hit movies. We also note that this trend can be seen but at a much smaller scale for the unadjusted box office of all movies. 
+However, the adjusted revenue shows a different trend for them. 
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
