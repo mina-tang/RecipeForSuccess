@@ -21,28 +21,32 @@ Our first question was "What makes a movie successful?". But what do we mean by 
 One last technicality is adjusting the box office for inflation. This step is essential to ensure that movies from different time periods are compared fairly, as there may be economic changes over the years. We used the US inflation rates as a measure for this standardization, to convert the box office revenue in 2012 US dollars. For this, a dataset from the US Bureau of Labor Inflation Statistics was used, the description can be found at the [resources page](/ada-2024-project-authenticdataaddicts/resources/).
 
 
-## Behind the Scenes: Let's Take a Quick Tour of the Movies
---> talk/put plots about the general trends, length type genre of movie that is the most successful
+## Behind the Scenes: Let's Take a Quick Tour of the Movies 📽️
+First, let's take the time to tour our movies! In the plots bellow, we can see the runtime, box office and release date distributions of our movies. Please note that we only took feature-length movies, i.e movies with a runtime of at least 60 minutes. 
+Below we can visualize histograms of the runtime, box office and release date distributions.
 
-Below we can visualize the runtime, box office and release date distributions.
 <iframe src="assets/plots/movies_numeric_features.html" width="750px" height="720px" frameborder="0" position="relative"></iframe>
-That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we later adjust the box office with the inflation.
 
-We also investigate other characteristics of the movies, such as genres, languages and countries of production.
+That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we later adjust the box office with the inflation. 
+
+Now let's dive a little deeper into components of a movie, such as its genre, language, and country of production. Feel free take a look at the beautiful bar chart below if that sounds interesting. 
 
 <iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
-The three most common genres are drama , comedy and thriller. 
+
+Wow, it looks like the three most common genres are drama, comedy and thriller... how profoundly unsuprising! Let's see if there are any suprises in terms of production countries or languages.
+
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/language_count.html" width="375" height="450px" frameborder="0"></iframe>
   <iframe src="assets/plots/countries_count.html" width="375" height="450px" frameborder="0"></iframe>
 </div>
 
-As we could expect, the most common language is English and the two most common countries are US and UK. We see that french and France are also well represented in our dataset, they come right after.
+Nope, none at all. As we could expect, the most common language is English and the two most common countries are the US and the UK. We see that French and France are also well represented in our dataset, coming right after.
 
-Finally we show here on overview of the ratings and number of votes of the movies:
+All these movies produced, from so many countries and in so many languages, but are they any good? Well, let's check out this histogram plotting the ratings and number of votes of the movies we're studying:
+
 <iframe src="assets/plots/ratings.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
-
+Quite impressive actually! A median rating of [insert rating] with on average of [insert number of votes] votes! Looks like there are a lot of high quality movies out there. 
 
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
