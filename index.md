@@ -21,8 +21,12 @@ Our first question was "What makes a movie successful?". But what do we mean by 
 One last technicality is adjusting the box office for inflation. This step is essential to ensure that movies from different time periods are compared fairly, as there may be economic changes over the years. We used the US inflation rates as a measure for this standardization, to convert the box office revenue in 2012 US dollars. For this, a dataset from the US Bureau of Labor Inflation Statistics was used, the description can be found at the [resources page](/ada-2024-project-authenticdataaddicts/resources/).
 
 
+## Meet Gertrude: Breaking the Mold
+At 75 years old, Gertrude has always dreamed of being an acress. "Why not?" she says. "If there is one thing I've learned in these 75 years, is that the only way to achieve your dreams is to try!" Hey, casting directors, who knows, maybe Gertrude really will be the secret sauce for your next multi-million-dollar movie! If not, she'll at least provide amazing cookies. 
+
+
 ## Behind the Scenes: Let's Take a Quick Tour of the Movies 📽️
-First, let's take the time to tour our movies! In the plots bellow, we can see the runtime, box office and release date distributions of our movies. Please note that we only took feature-length movies, i.e movies with a runtime of at least 60 minutes. 
+First, let's take the time to tour our movies! Sorry Gertrude, we have to put you on hold for now. In the plots bellow, we can see the runtime, box office and release date distributions of our movies. Please note that we only took feature-length movies, i.e movies with a runtime of at least 60 minutes. 
 Below we can visualize histograms of the runtime, box office and release date distributions.
 
 <iframe src="assets/plots/movies_numeric_features.html" width="750px" height="720px" frameborder="0" position="relative"></iframe>
@@ -33,14 +37,14 @@ Now let's dive a little deeper into components of a movie, such as its genre, la
 
 <iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
-Wow, it looks like the three most common genres are drama, comedy and thriller... how profoundly unsuprising! Let's see if there are any suprises in terms of production countries or languages.
+Wow, it looks like the three most common genres are drama, comedy and thriller... how profoundly unsuprising! Good news though, Gertrude loves thrillers! Maybe one day she will get to star in her own... Anyway, let's see if there are any suprises in terms of production countries or languages.
 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/language_count.html" width="375" height="450px" frameborder="0"></iframe>
   <iframe src="assets/plots/countries_count.html" width="375" height="450px" frameborder="0"></iframe>
 </div>
 
-Nope, none at all. As we could expect, the most common language is English and the two most common countries are the US and the UK. We see that French and France are also well represented in our dataset, coming right after.
+Nope, none at all. As we could expect, the most common language is English and the two most common countries are the US and the UK. We see that French and France are also well represented in our dataset, coming right after. Getrude lives in the US and speaks English, no problems in sight! 
 
 All these movies produced, from so many countries and in so many languages, but are they any good? Well, let's check out this histogram plotting the ratings and number of votes of the movies we're studying:
 
@@ -49,13 +53,13 @@ All these movies produced, from so many countries and in so many languages, but 
 Quite impressive actually! A median rating of [insert rating] with on average of [insert number of votes] votes! Looks like there are a lot of high quality movies out there. 
 
 ## Stars of the Show: It's Time to Explore the Leading Cast! 💫
-Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics.  
+Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics. 
 
 <iframe src="assets/plots/pie_actor_ethnicity.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
 
-You can see that African Americans are 20.4% of all actors in movies, whereas they only represent 14.4% of the leading cast. The percentages in the leading cast are also not even in the top 10 for White People and Indians, whereas they feature in the top 10 for all actors. German Americans go from not even being included in the all actors pie chart, to 5.42% in the lead actors pie chart. Wow, Meryl Streep doing the heavy lifting! These disparities are most likely due to a combination of casting bias, but also it is possible that we do not have much information on leading actors in Indian movies, for example. 
+You can see that African Americans are 20.4% of all actors in movies, whereas they only represent 14.4% of the leading cast. The percentages in the leading cast are also not even in the top 10 for White People and Indians, whereas they feature in the top 10 for all actors. German Americans go from not even being included in the all actors pie chart, to 5.42% in the lead actors pie chart. Wow, Meryl Streep doing the heavy lifting! These disparities are most likely due to a combination of casting bias, but also it is possible that we do not have much information on leading actors in Indian movies, for example. All this looks like good news for Gertrude. She is of German descent, so she might just score that sweet, sweet leading role! 
 
-We can see that the changes are not that drastic when it comes to gender. Whether in leading roles or in all roles, men represent about two thirds of all actors. Pretty sure in the general population it's 50/50, just saying...
+The news is not so good for Gertrude when we look at gender. Whether in leading roles or in all roles, men represent about two thirds of all actors. Pretty sure in the general population it's 50/50, just saying... 
 <iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
 
 Hang in there, we're almost done with this part! Finally, here are the distributions of some physical characteristics of the cast, with a comparison between lead actors and all actors:
@@ -63,7 +67,9 @@ Hang in there, we're almost done with this part! Finally, here are the distribut
   <iframe src="assets/plots/age_actor_lead.html" width="300" height="500px" frameborder="0"></iframe>
   <iframe src="assets/plots/height_actor_lead.html" width="450" height="500px" frameborder="0"></iframe>
 </div>
-For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors. Actors on young but not too young, tall but not too tall... 
+For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors. Actors on young but not too young, tall but not too tall... [mettre la diff homme/femme].
+
+Sure, Gertrude is on the older side, but that will just make her even more special, promise! 
 
 TODO explain this plot
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
