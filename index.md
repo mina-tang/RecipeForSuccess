@@ -88,8 +88,28 @@ There are all types of movies, we saw that the most common are drama and comedy,
 Let's look at the adjusted bow office depending on the genres.
 <iframe src="assets/plots/adjBO_vs_genres.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
+This looks good!
+But we didn't account for a lot of possible confounding variables influencing our results.
+To avoid this, we use propensity score matching. 😃 
+For each genre we matched movies of this genre movies with similar characteristic of an other genre.
+Then, we can compare the average effect (ATE) this genre has on the adjusted box office revenue and on the average rating.
+
+<iframe src="assets/plots/matching_genre_revenue.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+
+Woow, this is interesting! 
+Now we can see that Romance and Relationship is the genre which has on average the highest effect on the adjusted box office revenue.
+Maybe Gertrude should consider participating in a Romance or Relationship movie. I'm sure this would suite her well. 😊
+
 ## Box Office Hit or Critics' Darling? Can a Movie Have It All?
 --> to be good or to be successful 
+
+Now let's review the same plot as before, but instead of measuring the average effect a genre has on the box office revenue, let's see the effect on the average rating.
+
+<iframe src="assets/plots/matching_genre_rating.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+
+This changes the game!
+The genre Romance and Relationship has now a slight negative effect on the average rating. 😬
+If Gertrude is hoping for a good review instead, she should do a Drama.
 
 ## The Final Cut: What Did We Uncover? 
 --> summary and explain our key take aways
