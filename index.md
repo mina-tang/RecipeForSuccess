@@ -76,6 +76,8 @@ However, the adjusted revenue shows a different trend for them.
 --> talk about the distribution of genres, and then do these studies but by genre
 
 There are all types of movies, we saw that the most common are drama and comedy, but do the genres make a difference in terms of success? That's what we'll study now!
+Let's look at the adjusted bow office depending on the genres.
+<iframe src="assets/plots/adjBO_vs_genres.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
 ## Box Office Hit or Critics' Darling? Can a Movie Have It All?
 --> to be good or to be successful 
