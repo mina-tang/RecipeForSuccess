@@ -39,6 +39,11 @@ The three most common genres are drama , comedy and thriller.
 
 As we could expect, the most common language is English and the two most common countries are US and UK. We see that french and France are also well represented in our dataset, they come right after.
 
+Finally we show here on overview of the ratings and number of votes of the movies:
+<iframe src="assets/plots/ratings.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+
+
+
 ## Stars of the Show: It's Time to Explore the Leading Cast!
 --> talk about gender, ethnicity, height, and see how this affects things overall
 Now that we had an overview of the movies, let's investigate the actors and actresses in them!
