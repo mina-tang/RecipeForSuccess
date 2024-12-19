@@ -22,18 +22,24 @@ One last technicality is adjusting the box office for inflation. This step is es
 
 
 ## Meet Gertrude: Breaking the Mold
-At 75 years old, Gertrude has always dreamed of being an acress. "Why not?" she says. "If there is one thing I've learned in these 75 years, is that the only way to achieve your dreams is to try!" Hey, casting directors, who knows, maybe Gertrude really will be the secret sauce for your next multi-million-dollar movie! If not, she'll at least provide amazing cookies. 
+At 75 years old, Gertrude has always dreamed of being an actress. "Why not?" she says. "If there is one thing I've learned in these 75 years, is that the only way to achieve your dreams is to try!" Hey, casting directors, who knows, maybe Gertrude really will be the secret sauce for your next multi-million-dollar movie! If not, she'll at least provide amazing cookies. 
 
 
 ## Behind the Scenes: Let's Take a Quick Tour of the Movies 📽️
-First, let's take the time to tour our movies! Sorry Gertrude, we have to put you on hold for now. In the plots bellow, we can see the runtime, box office and release date distributions of our movies. Please note that we only took feature-length movies, i.e movies with a runtime of at least 60 minutes. 
+First, let's take the time to tour our movies! Sorry Gertrude, we have to put you on hold for now. In the plots below, we can see the runtime, box office and release date distributions of our movies. Please note that we only took feature-length movies, i.e movies with a runtime of at least 60 minutes. 
 Below we can visualize histograms of the runtime, box office and release date distributions.
 
 <iframe src="assets/plots/movies_numeric_features.html" width="750px" height="720px" frameborder="0" position="relative"></iframe>
 
-That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we later adjust the box office with the inflation. 
+That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we now adjust the box office with the inflation. 
 
-Now let's dive a little deeper into components of a movie, such as its genre, language, and country of production. Feel free take a look at the beautiful bar chart below if that sounds interesting. 
+On the left, we show the average box offices for only the top 10 movies of the year, and on the right for all of them.
+<iframe src="assets/plots/inflation.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+Let's try to understand theses graphs. For the top 10 movies, we see a clear trend (in both adjusted and unadjusted box office) that the average revenue becomes higher among the years.
+This means recent hit movies have a better commercial success than older hit movies. We also note that this trend can be seen but at a much smaller scale for the unadjusted box office of all movies. 
+However, the adjusted revenue shows a different trend for them. 
+
+Now let's dive a little deeper into components of a movie, such as its genre, language, and country of production. Feel free to take a look at the beautiful bar chart below if that sounds interesting. 
 
 <iframe src="assets/plots/genres_count.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
@@ -50,7 +56,7 @@ All these movies produced, from so many countries and in so many languages, but 
 
 <iframe src="assets/plots/ratings.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
-Quite impressive actually! A median rating of [insert rating] with on average of [insert number of votes] votes! Looks like there are a lot of high quality movies out there. 
+Quite impressive actually! A median rating of 6.4 with on average of 60651 votes! Looks like there are a lot of high quality movies out there. 
 
 ## Stars of the Show: It's Time to Explore the Leading Cast! 💫
 Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics. 
@@ -74,12 +80,6 @@ Sure, Gertrude is on the older side, but that will just make her even more speci
 TODO explain this plot
 <iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 
-Due to the difference of numbers of movies across the years and [TODO?] to the correlation between the release date and the revenue of the movie, we adjust the revenue for inflation.
-On the left, we show the average box offices for only the top 10 movies of the year, and on the right for all of them.
-<iframe src="assets/plots/inflation.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
-Let's try to understand theses graphs. For the top 10 movies, we see a clear trend (in both adjusted and unadjusted box office) that the average revenue becomes higher among the year.
-This means recent hit movies have a better commercial success than older hit movies. We also note that this trend can be seen but at a much smaller scale for the unadjusted box office of all movies. 
-However, the adjusted revenue shows a different trend for them. 
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
@@ -91,14 +91,14 @@ Let's look at the adjusted bow office depending on the genres.
 This looks good!
 But we didn't account for a lot of possible confounding variables influencing our results.
 To avoid this, we use propensity score matching. 😃 
-For each genre we matched movies of this genre movies with similar characteristic of an other genre.
+For each genre we matched movies of this genre movies with similar characteristic of another genre.
 Then, we can compare the average effect (ATE) this genre has on the adjusted box office revenue and on the average rating.
 
 <iframe src="assets/plots/matching_genre_revenue.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
 Woow, this is interesting! 
 Now we can see that Romance and Relationship is the genre which has on average the highest effect on the adjusted box office revenue.
-Maybe Gertrude should consider participating in a Romance or Relationship movie. I'm sure this would suite her well. 😊
+Maybe Gertrude should consider participating in a Romance or Relationship movie. I'm sure this would suit her well. 😊
 
 ## Box Office Hit or Critics' Darling? Can a Movie Have It All?
 --> to be good or to be successful 
