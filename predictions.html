@@ -170,6 +170,8 @@ permalink: /movie-prediction/
 
             <!-- Prediction Result -->
             <p id="prediction-result" class="text-center mt-4"></p>
+            <p id="prediction-result-status" class="text-center mt-4"></p>
+
 
             <h2>⚠️ Disclaimer</h2>
             <p class="disclaimer">The results of this prediction tool are for informational purposes only and do not
@@ -211,7 +213,7 @@ permalink: /movie-prediction/
     document.getElementById('movie-form').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the default form submission
 
-        document.getElementById('prediction-result').textContent = "Prediction logic is currently being processed (it may take up to 1 minute)! 🎬";
+        document.getElementById('prediction-result').textContent = "Prediction logic is currently being processed (it may take up to 5 minutes)! 🎬";
 
         // Gather form data
         const formData = {
@@ -341,7 +343,7 @@ permalink: /movie-prediction/
         async function startInference() {
             try {
 
-                console.log("Trying to fetch the model...")
+                document.getElementById('prediction-result-status').textContent = "Status: Trying to fetch the model...";
 
                 // Fetch the model from the URL
                 const modelUrl = 'https://mina-tang.github.io/ada-2024-project-authenticdataaddicts/assets/models/random_forest_model.onnx';
@@ -350,28 +352,30 @@ permalink: /movie-prediction/
                 const modelResponse = await fetch(modelUrl);
                 const modelArrayBuffer = await modelResponse.arrayBuffer();
 
-                console.log("Model fetched...")
+                document.getElementById('prediction-result-status').textContent = "Status: Model fetched, creating the inference session...";
 
                 // Create the inference session with the model data
                 const session = await ort.InferenceSession.create(modelArrayBuffer);
 
-                const input = new ort.Tensor(new Float32Array(Object.values(scaledFormData)), [1, 9]);
+                const input = new ort.Tensor(new Float32Array(Object.values(scaledFormData)), [1, 40]);
                 const feeds = { float_input: input };
 
-                console.log("Guessing result...")
+                document.getElementById('prediction-result-status').textContent = "Status: Inference session created, guessing your result...";
 
                 // feed inputs and run
                 const results = await session.run(feeds);
 
                 // read from results
                 console.log(results)
-
+                document.getElementById('prediction-result-status').textContent = "";
                 document.getElementById('prediction-result').textContent = results;
-
 
                 // unscale the result with scaler_y
 
             } catch (e) {
+                document.getElementById('prediction-result-status').textContent = "Status: error...";
+                document.getElementById('prediction-result').textContent = "Sadly, it looks like an error happened :(";
+
                 console.log(`failed to inference ONNX model`);
                 console.error(e);
             }
