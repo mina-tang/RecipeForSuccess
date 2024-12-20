@@ -162,16 +162,18 @@ permalink: /movie-prediction/
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-lg btn-block mt-4"
+                <button type="submit" id="sub-button" class="btn btn-lg btn-block mt-4"
                     style="background-color: #404040; color: white;">
                     Predict Your Blockbuster! 🚀
                 </button>
             </form>
 
             <!-- Prediction Result -->
-            <p id="prediction-result" class="text-center mt-4"></p>
-            <p id="prediction-result-status" class="text-center mt-4"></p>
-
+            <!-- Prediction Result Section -->
+            <div class="text-center mt-4 p-4 bg-light rounded shadow-sm">
+                <p id="prediction-result" class="h4 font-weight-bold text-dark"></p>
+                <p id="prediction-result-status" class="mt-2 text-muted"></p>
+            </div>
 
             <h2>⚠️ Disclaimer</h2>
             <p class="disclaimer">The results of this prediction tool are for informational purposes only and do not
@@ -213,7 +215,9 @@ permalink: /movie-prediction/
     document.getElementById('movie-form').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the default form submission
 
-        document.getElementById('prediction-result').textContent = "Prediction logic is currently being processed (it may take up to 5 minutes)! 🎬";
+        document.getElementById('sub-button').disabled = true;
+
+        document.getElementById('prediction-result').textContent = "🎥 Hold on to your popcorn! Your blockbuster prediction is in the works (it may take up to 5 minutes)... 🎬";
 
         // Gather form data
         const formData = {
@@ -368,16 +372,19 @@ permalink: /movie-prediction/
                 // read from results
                 console.log(results)
                 document.getElementById('prediction-result-status').textContent = "";
-                document.getElementById('prediction-result').textContent = results;
+                document.getElementById('prediction-result').textContent = "✨ The results are in! Here's how your movie idea measures up: " + unscaleData(results.variable.data[0]);
+                document.getElementById('sub-button').disabled = false;
 
                 // unscale the result with scaler_y
 
+
             } catch (e) {
-                document.getElementById('prediction-result-status').textContent = "Status: error...";
-                document.getElementById('prediction-result').textContent = "Sadly, it looks like an error happened :(";
+                document.getElementById('prediction-result-status').textContent = "";
+                document.getElementById('prediction-result').textContent = "💔 Whoops! An error happened during the prediction. Please try again. 🎞️"
 
                 console.log(`failed to inference ONNX model`);
                 console.error(e);
+                document.getElementById('sub-button').disabled = false;
             }
         }
 
