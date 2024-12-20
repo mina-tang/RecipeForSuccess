@@ -266,19 +266,17 @@ permalink: /movie-prediction/
         // DISCLAIMER: Hard-coded values taken from the results notebook
         // DISCLAIMER: Should be done with a proper backend, but hard-coded it here due to practical constraints
 
-        const scaler_x = {
-            "mean": [109.69768656716418, 10702168.089800995, 0.6843283582089552, 1.7570166169154229, 36.198507462686564, 0.5606641123882503, 1.7424408173690933, 34.57854406130268, 35.8619884867322, 1.7506802717900642, 2.9350746268656716],
-            "scale": [28.453079507392495, 23129139.729189236, 0.4647828055769609, 0.09640402005148477, 12.188278267481678, 0.49630622146830455, 0.09832562962405401, 12.044842400232595, 9.915309399809558, 0.07548221179893114, 2.1879392652132]
-        }
-
-        const scaler_y = {
-            "mean": [6.169676616915423],
-            "scale": [1.0544425774572668]
-        }
+        const scaler_x = { "mean": [109.69768656716418, 1990.8146766169154, 10702168.089800995, 0.6843283582089552, 1.7570166169154229, 36.198507462686564, 0.5606641123882503, 1.7424408173690933, 34.57854406130268, 35.8619884867322, 1.7506802717900642, 2.9350746268656716], "scale": [28.453079507392495, 18.526026697431128, 23129139.729189236, 0.4647828055769609, 0.09640402005148477, 12.188278267481678, 0.49630622146830455, 0.09832562962405401, 12.044842400232595, 9.915309399809558, 0.07548221179893114, 2.1879392652132] }
+        const scaler_y = { "mean": [6.169676616915423], "scale": [1.0544425774572668] }
 
         // Helper function to scale data
         function scaleData(value, mean, scale) {
             return (value - mean) / scale;
+        }
+
+        // Helper function to unscale data
+        function unscaleData(value) {
+            return value * scaler_y.scale[0] + scaler_y.mean[0];
         }
 
         // Scale relevant form data
@@ -287,19 +285,19 @@ permalink: /movie-prediction/
             releaseYear: scaleData(parseFloat(formData.releaseYear), scaler_x.mean[1], scaler_x.scale[1]),
             budget: scaleData(parseFloat(formData.budget), scaler_x.mean[2], scaler_x.scale[2]),
 
-            actor1_height: scaleData(parseFloat(formData.actor1_height), scaler_x.mean[3], scaler_x.scale[3]),
-            actor1_age: scaleData(parseFloat(formData.actor1_age), scaler_x.mean[4], scaler_x.scale[4]),
+            actor1_height: scaleData(parseFloat(formData.actor1_height), scaler_x.mean[4], scaler_x.scale[4]),
+            actor1_age: scaleData(parseFloat(formData.actor1_age), scaler_x.mean[5], scaler_x.scale[5]),
 
-            actor2_height: scaleData(parseFloat(formData.actor2_height), scaler_x.mean[5], scaler_x.scale[5]),
-            actor2_age: scaleData(parseFloat(formData.actor2_age), scaler_x.mean[6], scaler_x.scale[6]),
+            actor2_height: scaleData(parseFloat(formData.actor2_height), scaler_x.mean[7], scaler_x.scale[7]),
+            actor2_age: scaleData(parseFloat(formData.actor2_age), scaler_x.mean[8], scaler_x.scale[8]),
 
-            meanAge: scaleData(parseFloat(formData.meanAge), scaler_x.mean[7], scaler_x.scale[7]),
-            meanHeight: scaleData(parseFloat(formData.meanHeight), scaler_x.mean[8], scaler_x.scale[8]),
-            numCharacters: scaleData(parseFloat(formData.numCharacters), scaler_x.mean[9], scaler_x.scale[9]),
+            meanAge: scaleData(parseFloat(formData.meanAge), scaler_x.mean[9], scaler_x.scale[9]),
+            meanHeight: scaleData(parseFloat(formData.meanHeight), scaler_x.mean[10], scaler_x.scale[10]),
+            numCharacters: scaleData(parseFloat(formData.numCharacters), scaler_x.mean[11], scaler_x.scale[11]),
 
             // Map gender to 1 for male, 0 for female
-            actor1_gender: formData.actor1_gender === 'male' ? 1 : 0,
-            actor2_gender: formData.actor2_gender === 'male' ? 1 : 0,
+            actor1_gender: scaleData(formData.actor1_gender === 'male' ? 1 : 0, scaler_x.mean[3], scaler_x.scale[3]),
+            actor2_gender: scaleData(formData.actor2_gender === 'male' ? 1 : 0, scaler_x.mean[6], scaler_x.scale[6]),
 
             // Map boolean values to 1 or 0
             is_action: formData.is_action ? 1 : 0,
