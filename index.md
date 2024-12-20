@@ -63,7 +63,7 @@ We use propensity score matching to measure the effect a country has on the aver
 
 <iframe src="assets/plots/matching_country_rating.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
-Ohhh, that's interesting! Movies in Spain have on average more than 0.6 rating points more than movies from other countries.
+Ohhh, that's interesting! Movies in Spain have on average about 0.5 rating points more than movies from other countries.
 Gertrude, I hope your listening carefully, maybe you should go to Spain 🇪🇸 to star in the most loved movies.
 
 ## Stars of the Show: It's Time to Explore the Leading Cast! 💫
