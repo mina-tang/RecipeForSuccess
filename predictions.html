@@ -341,8 +341,6 @@ permalink: /movie-prediction/
             is_mainethni_white: formData.is_mainethni_white ? 1 : 0
         };
 
-        console.log(scaledFormData)
-
         // predict using model
         async function startInference() {
             try {
@@ -370,7 +368,6 @@ permalink: /movie-prediction/
                 const results = await session.run(feeds);
 
                 // read from results
-                console.log(results)
                 document.getElementById('prediction-result-status').textContent = "";
                 document.getElementById('sub-button').disabled = false;
 
@@ -379,10 +376,6 @@ permalink: /movie-prediction/
 
                 document.getElementById('prediction-result').textContent =
                     `✨ The results are in! Your movie idea scores a stellar rating of ${rating}/10! 🌟`;
-
-
-                // unscale the result with scaler_y
-
 
             } catch (e) {
                 document.getElementById('prediction-result-status').textContent = "";
