@@ -211,7 +211,7 @@ permalink: /movie-prediction/
     document.getElementById('movie-form').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the default form submission
 
-        document.getElementById('prediction-result').textContent = "Prediction logic is in progress! 🎬";
+        document.getElementById('prediction-result').textContent = "Prediction logic is currently being processed (it may take up to 1 minute)! 🎬";
 
         // Gather form data
         const formData = {
@@ -340,9 +340,16 @@ permalink: /movie-prediction/
         // predict using model
         async function startInference() {
             try {
-                // create a new session and load the model.
 
-                const session = await ort.InferenceSession.create('./assets/random_forest_model.onnx');
+                // Fetch the model from the URL
+                const modelUrl = 'https://mina-tang.github.io/ada-2024-project-authenticdataaddicts/assets/models/random_forest_model.onnx';
+
+                // Fetch the model data
+                const modelResponse = await fetch(modelUrl);
+                const modelArrayBuffer = await modelResponse.arrayBuffer();
+
+                // Create the inference session with the model data
+                const session = await ort.InferenceSession.create(modelArrayBuffer);
 
                 const input = new ort.Tensor(new Float32Array(scaledFormData.values()), [1, 9]);
                 const feeds = { float_input: input };
