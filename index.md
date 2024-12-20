@@ -58,6 +58,14 @@ All these movies produced, from so many countries and in so many languages, but 
 
 Quite impressive actually! A median rating of 6.4 with on average of 60651 votes! Looks like there are a lot of high quality movies out there. 
 
+But how does the rating change with respect to the country of movie?
+We use propensity score matching to measure the effect a country has on the average rating.
+
+<iframe src="assets/plots/matching_country_rating.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+
+Ohhh, that's interesting! Movies in Spain have on average more than 0.6 rating points more than movies from other countries.
+Gertrude, I hope your listening carefully, maybe you should go to Spain 🇪🇸 to find out how to produce the most loved movies.
+
 ## Stars of the Show: It's Time to Explore the Leading Cast! 💫
 Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics. 
 
@@ -93,6 +101,7 @@ But we didn't account for a lot of possible confounding variables influencing ou
 To avoid this, we use propensity score matching. 😃 
 For each genre we matched movies of this genre movies with similar characteristic of another genre.
 Then, we can compare the average effect (ATE) this genre has on the adjusted box office revenue and on the average rating.
+For technical reasons we didn't use the box office itself but the log of the box office.
 
 <iframe src="assets/plots/matching_genre_revenue.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
