@@ -89,18 +89,19 @@ But does gender, height and age really makes a difference?
 We did propensity score matching on different age at release and height groups.
 For each age at release and height group, we measure the average effect (ATE) on the rating and box office revenue.
 
-|                      |   ATE on average rating |   ATE on log adjusted box office revenue |
-|:---------------------|------------------------:|-----------------------------------------:|
-| Gender               |                 -0.0689 |                                   0.0124 |
-| Height [1.52m,1.73m] |                 -0.0382 |                                  -0.0058 |
-| Height [1.73m,1.80m] |                  0.0578 |                                  -0.0158 |
-| Height [1.80m,2.16m] |                 -0.0212 |                                  -0.0175 |
-| Age [8.0,26.0]       |                  0.0346 |                                  -0.0055 |
-| Age [26.0,30.0]      |                  0.0479 |                                  -0.0148 |
-| Age [30.0,35.0]      |                  0.0386 |                                  -0.0285 |
-| Age [35.0,40.0]      |                 -0.0799 |                                  -0.0015 |
-| Age [40.0,48.0]      |                 -0.0873 |                                  -0.0041 |
-| Age [48.0,86.0]      |                 -0.0309 |                                  -0.0434 |
+|                      |   ATE on average  |    ATE on log adjusted |
+|                      |           rating  |     box office revenue |
+|:---------------------|------------------:|-----------------------:|
+| Gender               |           -0.0689 |                 0.0124 |
+| Height [1.52m,1.73m] |           -0.0382 |                -0.0058 |
+| Height [1.73m,1.80m] |            0.0578 |                -0.0158 |
+| Height [1.80m,2.16m] |           -0.0212 |                -0.0175 |
+| Age [8.0,26.0]       |            0.0346 |                -0.0055 |
+| Age [26.0,30.0]      |            0.0479 |                -0.0148 |
+| Age [30.0,35.0]      |            0.0386 |                -0.0285 |
+| Age [35.0,40.0]      |           -0.0799 |                -0.0015 |
+| Age [40.0,48.0]      |           -0.0873 |                -0.0041 |
+| Age [48.0,86.0]      |           -0.0309 |                -0.0434 |
 
 Actually, none of the age nor height groups seem to have a signifiant impact on the average rating or box office revenue.
 So, Gertrude, believe in yourself and continue to follow your dream ! 🤗
