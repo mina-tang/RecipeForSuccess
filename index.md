@@ -149,3 +149,5 @@ We still uncovered some key takeaways:
 
 ## And That's a Wrap! 
 There is no universal formula, but a mix of creativity, boldness, and hard work should do the trick. It's time for Gertrude to take over Hollywood! 👏
+
+Thanks for joining us through this cinematic journey, see you at the theaters! 🎬
