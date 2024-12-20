@@ -54,7 +54,7 @@ Nope, none at all. As we could expect, the most common language by far is Englis
 
 All these movies produced, from so many countries and in so many languages, but are they any good? Well, let's check out this histogram plotting the ratings and number of votes of the movies we're studying:
 
-<iframe src="assets/plots/ratings.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/ratings.html" width="750px" height="400px" frameborder="0" position="relative"></iframe>
 
 Quite impressive actually! A median rating of 6.4 with on average of 60651 votes! Looks like there are a lot of high quality movies out there. 
 
