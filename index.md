@@ -130,4 +130,4 @@ We still uncovered some key takeaways:
 ![Alt text](assets/plots/ohno.png)
 
 ## And That's a Wrap! 
-There is no universal formula, but a mix of creativity, boldness, and hard work seems to be the key. It's time for Gertrude to take over Hollywood! 👏
+There is no universal formula, but a mix of creativity, boldness, and hard work should do the trick. It's time for Gertrude to take over Hollywood! 👏
