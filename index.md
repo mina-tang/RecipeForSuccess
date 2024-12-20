@@ -117,9 +117,9 @@ The genre Romance and Relationship has now a slight negative effect on the avera
 If Gertrude is hoping for a good review instead, she should do a Drama.
 
 ## The Final Cut: What Did We Uncover? 🕵️‍♂️
-With all this precious information, Gertrude now holds the secrets to making a great movie. She's starting to think that being a director might suit her just as well as acting!
+With all this precious information, Gertrude now holds the secrets to making a blockbuster hit. She's starting to think that being a director might suit her just as well as acting! ✨ And guess what? She can now harness the power of her very own "Movie Success Predictor" to predict the rating on her future movie. Curious? Gertrude can click [here](https://mina-tang.github.io/ada-2024-project-authenticdataaddicts/movie-prediction/) to dive in and start planning her next big hit! 🎥🌟
 
-Our analysis reveals one true thing: there is no single recipe to movie success. 
+Diving back into our analysis reveals one undeniable truth: there’s no magic formula for movie success.
 It looks like a lead actor's physical and demographic characteristics really don't have that much of an effect on the success of a movie. 
 Maybe the secret sauce is just originality and breaking the mold. Gertrude would be the perfect fit! 
 We still uncovered some key takeaways:
