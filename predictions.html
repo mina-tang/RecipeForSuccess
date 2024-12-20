@@ -32,6 +32,13 @@ permalink: /movie-prediction/
                     </select>
                 </div>
 
+                <!-- Release year -->
+                <div class="form-group">
+                    <label for="release-year">Estimated release year:</label>
+                    <input type="number" id="release-year" name="release-year" class="form-control"
+                        placeholder="e.g., 2025" required>
+                </div>
+
                 <!-- Runtime -->
                 <div class="form-group">
                     <label for="runtime">Movie Runtime (in minutes):</label>
@@ -39,7 +46,7 @@ permalink: /movie-prediction/
                         required>
                 </div>
 
-                <!-- Runtime -->
+                <!-- Budget -->
                 <div class="form-group">
                     <label for="budget">Budget (in $):</label>
                     <input type="number" id="budget" name="budget" class="form-control" placeholder="e.g., 1000000"
@@ -182,9 +189,9 @@ permalink: /movie-prediction/
                 <p>Our model considers various features to make predictions. The most important ones are:</p>
                 <ul>
                     <li><strong>Runtime</strong>: Contributing 16.3% to the prediction.</li>
-                    <li><strong>Movie Release Year</strong>: Contributing 13.1%.</li>
+                    <li><strong>Movie Release Year</strong>: Contributing 13.2%.</li>
                     <li><strong>Mean Age of Characters</strong>: Contributing 7.9%.</li>
-                    <li><strong>Budget</strong>: Contributing 7.1%.</li>
+                    <li><strong>Budget</strong>: Contributing 7.3%.</li>
                 </ul>
                 <p>Other factors, like actor demographics and movie genres, also play a role but are less influential.
                     😊</p>
@@ -203,40 +210,137 @@ permalink: /movie-prediction/
     document.getElementById('movie-form').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the default form submission
 
+        document.getElementById('prediction-result').textContent = "Prediction logic is in progress! 🎬";
+
         // Gather form data
         const formData = {
-            genre: document.getElementById('movie-genre').value,
             runtime: document.getElementById('runtime').value,
-            numCharacters: document.getElementById('num-characters').value,
+            releaseYear: document.getElementById('release-year').value,
+            budget: document.getElementById('budget').value,
+
+            actor1_gender: document.getElementById('actor-gender-lead-actor1').value,
+            actor1_height: document.getElementById('actor-height-lead-actor1').value,
+            actor1_age: document.getElementById('actor-age-at-release-lead-actor1').value,
+
+            actor2_gender: document.getElementById('actor-gender-lead-actor2').value,
+            actor2_height: document.getElementById('actor-height-lead-actor2').value,
+            actor2_age: document.getElementById('actor-age-at-release-lead-actor2').value,
+
             meanAge: document.getElementById('mean-age').value,
             meanHeight: document.getElementById('mean-height').value,
-            mainEthnicity: document.getElementById('main-ethnicity').value,
-            budget: document.getElementById('budget').value,
-            actor1: {
-                gender: document.getElementById('actor-gender-lead-actor1').value,
-                height: document.getElementById('actor-height-lead-actor1').value,
-                age: document.getElementById('actor-age-at-release-lead-actor1').value,
-                ethnicity: document.getElementById('actor-ethnicity-lead-actor1').value
-            },
-            actor2: {
-                gender: document.getElementById('actor-gender-lead-actor2').value,
-                height: document.getElementById('actor-height-lead-actor2').value,
-                age: document.getElementById('actor-age-at-release-lead-actor2').value,
-                ethnicity: document.getElementById('actor-ethnicity-lead-actor2').value
-            }
+            numCharacters: document.getElementById('num-characters').value,
+
+            is_action: document.getElementById('movie-genre').value == 'action',
+            is_comedy: document.getElementById('movie-genre').value == 'comedy',
+            is_crime: document.getElementById('movie-genre').value == 'crime',
+            is_drama: document.getElementById('movie-genre').value == 'drama',
+            is_fantasy: document.getElementById('movie-genre').value == 'fantasy',
+            is_historical: document.getElementById('movie-genre').value == 'historical',
+            is_horror: document.getElementById('movie-genre').value == 'horror',
+            is_music: document.getElementById('movie-genre').value == 'musical',
+            is_other: document.getElementById('movie-genre').value == 'other',
+            is_romance: document.getElementById('movie-genre').value == 'romance',
+
+            is_actor1_african: document.getElementById('actor-ethnicity-lead-actor1').value == 'african',
+            is_actor1_asian: document.getElementById('actor-ethnicity-lead-actor1').value == 'asian',
+            is_actor1_hispanic: document.getElementById('actor-ethnicity-lead-actor1').value == 'hispanic',
+            is_actor1_indi: document.getElementById('actor-ethnicity-lead-actor1').value == 'indigenous',
+            is_actor1_other: document.getElementById('actor-ethnicity-lead-actor1').value == 'other',
+            is_actor1_white: document.getElementById('actor-ethnicity-lead-actor1').value == 'white',
+
+            is_actor2_african: document.getElementById('actor-ethnicity-lead-actor2').value == 'african',
+            is_actor2_asian: document.getElementById('actor-ethnicity-lead-actor2').value == 'asian',
+            is_actor2_hispanic: document.getElementById('actor-ethnicity-lead-actor2').value == 'hispanic',
+            is_actor2_indi: document.getElementById('actor-ethnicity-lead-actor2').value == 'indigenous',
+            is_actor2_other: document.getElementById('actor-ethnicity-lead-actor2').value == 'other',
+            is_actor2_white: document.getElementById('actor-ethnicity-lead-actor2').value == 'white',
+
+            is_mainethni_african: document.getElementById('main-ethnicity').value == 'african',
+            is_mainethni_asian: document.getElementById('main-ethnicity').value == 'asian',
+            is_mainethni_hispanic: document.getElementById('main-ethnicity').value == 'hispanic',
+            is_mainethni_indi: document.getElementById('main-ethnicity').value == 'indigenous',
+            is_mainethni_other: document.getElementById('main-ethnicity').value == 'other',
+            is_mainethni_white: document.getElementById('main-ethnicity').value == 'white',
         };
 
-        // Display the gathered form data in the console (for testing purposes)
-        console.log(formData);
+        // DISCLAIMER: Hard-coded values taken from the results notebook
+        // DISCLAIMER: Should be done with a proper backend, but hard-coded it here due to practical constraints
 
-        // // Get scalers
-        // const scalerX = require('./assets/predictor/scaler_x.json');
-        // const scalerY = require('./assets/predictor/scaler_y.json');
+        const scaler_x = {
+            "mean": [109.69768656716418, 10702168.089800995, 0.6843283582089552, 1.7570166169154229, 36.198507462686564, 0.5606641123882503, 1.7424408173690933, 34.57854406130268, 35.8619884867322, 1.7506802717900642, 2.9350746268656716],
+            "scale": [28.453079507392495, 23129139.729189236, 0.4647828055769609, 0.09640402005148477, 12.188278267481678, 0.49630622146830455, 0.09832562962405401, 12.044842400232595, 9.915309399809558, 0.07548221179893114, 2.1879392652132]
+        }
 
-        // // Print scalers
-        // console.log('Scaler X:', scalerX);
-        // console.log('Scaler Y:', scalerY);
+        const scaler_y = {
+            "mean": [6.169676616915423],
+            "scale": [1.0544425774572668]
+        }
 
-        document.getElementById('prediction-result').textContent = "Prediction logic is in progress! 🎬";
+        // Helper function to scale data
+        function scaleData(value, mean, scale) {
+            return (value - mean) / scale;
+        }
+
+        // Scale relevant form data
+        const scaledFormData = {
+            runtime: scaleData(parseFloat(formData.runtime), scaler_x.mean[0], scaler_x.scale[0]),
+            releaseYear: scaleData(parseFloat(formData.releaseYear), scaler_x.mean[1], scaler_x.scale[1]),
+            budget: scaleData(parseFloat(formData.budget), scaler_x.mean[2], scaler_x.scale[2]),
+
+            actor1_height: scaleData(parseFloat(formData.actor1_height), scaler_x.mean[3], scaler_x.scale[3]),
+            actor1_age: scaleData(parseFloat(formData.actor1_age), scaler_x.mean[4], scaler_x.scale[4]),
+
+            actor2_height: scaleData(parseFloat(formData.actor2_height), scaler_x.mean[5], scaler_x.scale[5]),
+            actor2_age: scaleData(parseFloat(formData.actor2_age), scaler_x.mean[6], scaler_x.scale[6]),
+
+            meanAge: scaleData(parseFloat(formData.meanAge), scaler_x.mean[7], scaler_x.scale[7]),
+            meanHeight: scaleData(parseFloat(formData.meanHeight), scaler_x.mean[8], scaler_x.scale[8]),
+            numCharacters: scaleData(parseFloat(formData.numCharacters), scaler_x.mean[9], scaler_x.scale[9]),
+
+            // Map gender to 1 for male, 0 for female
+            actor1_gender: formData.actor1_gender === 'male' ? 1 : 0,
+            actor2_gender: formData.actor2_gender === 'male' ? 1 : 0,
+
+            // Map boolean values to 1 or 0
+            is_action: formData.is_action ? 1 : 0,
+            is_comedy: formData.is_comedy ? 1 : 0,
+            is_crime: formData.is_crime ? 1 : 0,
+            is_drama: formData.is_drama ? 1 : 0,
+            is_fantasy: formData.is_fantasy ? 1 : 0,
+            is_historical: formData.is_historical ? 1 : 0,
+            is_horror: formData.is_horror ? 1 : 0,
+            is_music: formData.is_music ? 1 : 0,
+            is_other: formData.is_other ? 1 : 0,
+            is_romance: formData.is_romance ? 1 : 0,
+
+            // Map ethnicity to 1 or 0
+            is_actor1_african: formData.is_actor1_african ? 1 : 0,
+            is_actor1_asian: formData.is_actor1_asian ? 1 : 0,
+            is_actor1_hispanic: formData.is_actor1_hispanic ? 1 : 0,
+            is_actor1_indi: formData.is_actor1_indi ? 1 : 0,
+            is_actor1_other: formData.is_actor1_other ? 1 : 0,
+            is_actor1_white: formData.is_actor1_white ? 1 : 0,
+
+            is_actor2_african: formData.is_actor2_african ? 1 : 0,
+            is_actor2_asian: formData.is_actor2_asian ? 1 : 0,
+            is_actor2_hispanic: formData.is_actor2_hispanic ? 1 : 0,
+            is_actor2_indi: formData.is_actor2_indi ? 1 : 0,
+            is_actor2_other: formData.is_actor2_other ? 1 : 0,
+            is_actor2_white: formData.is_actor2_white ? 1 : 0,
+
+            is_mainethni_african: formData.is_mainethni_african ? 1 : 0,
+            is_mainethni_asian: formData.is_mainethni_asian ? 1 : 0,
+            is_mainethni_hispanic: formData.is_mainethni_hispanic ? 1 : 0,
+            is_mainethni_indi: formData.is_mainethni_indi ? 1 : 0,
+            is_mainethni_other: formData.is_mainethni_other ? 1 : 0,
+            is_mainethni_white: formData.is_mainethni_white ? 1 : 0
+        };
+
+        console.log(scaledFormData)
+
+        // predict using model
+
+        // unscale the result with scaler_y
+
     });
 </script>
