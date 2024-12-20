@@ -195,22 +195,13 @@ permalink: /movie-prediction/
         // Display the gathered form data in the console (for testing purposes)
         console.log(formData);
 
-        // Load the scaler_x.json
-        fetch('assets/predictor/scaler_x.json')
-            .then(response => response.json())
-            .then(scalerX => {
-                console.log('Scaler X:', scalerX);
+        // Get scalers
+        const scalerX = require('./assets/predictor/scaler_x.json');
+        const scalerY = require('./assets/predictor/scaler_y.json');
 
-                // Get the scaler_y.json
-                return fetch('assets/predictor/scaler_y.json');
-            })
-            .then(response => response.json())
-            .then(scalerY => {
-                console.log('Scaler Y:', scalerY);
-            })
-            .catch(error => {
-                console.error('Error loading scalers:', error);
-            });
+        // Print scalers
+        console.log('Scaler X:', scalerX);
+        console.log('Scaler Y:', scalerY);
 
         document.getElementById('prediction-result').textContent = "Prediction logic is in progress! 🎬";
     });
