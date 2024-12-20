@@ -58,14 +58,6 @@ All these movies produced, from so many countries and in so many languages, but 
 
 Quite impressive actually! A median rating of 6.4 with on average of 60651 votes! Looks like there are a lot of high quality movies out there. 
 
-But how does the rating change with respect to the country of movie?
-We use propensity score matching to measure the effect a country has on the average rating.
-
-<iframe src="assets/plots/matching_country_rating.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
-
-Ohhh, that's interesting! Movies in Spain have on average about 0.5 rating points more than movies from other countries.
-Gertrude, I hope your listening carefully, maybe you should go to Spain 🇪🇸 to star in the most loved movies.
-
 ## Stars of the Show: It's Time to Explore the Leading Cast! 💫
 Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics. 
 
@@ -104,6 +96,15 @@ For each age at release and height group, we measure the average effect (ATE) on
 
 Actually, none of the age nor height groups seem to have a signifiant impact on the average rating or box office revenue.
 So, Gertrude, believe in yourself and continue to follow your dream ! 🤗
+
+## From Screen to Score: Does Country of Production Matter? 🎦
+We saw earlier that movies had a median rating of 6.4, but is the country of production of a movie positively or negativelly correlated with its rating? We use propensity score matching to measure the effect a country has on the average rating.
+
+<iframe src="assets/plots/matching_country_rating.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
+
+Ohhh, that's interesting! Movies in Spain have on average about 0.5 rating points more than movies from other countries.
+Gertrude, I hope your listening carefully, maybe you should go to Spain 🇪🇸 to star in the most loved movies.
+
 
 ## Does the Genre Change the Game? Let's Find Out! 🎬
 
