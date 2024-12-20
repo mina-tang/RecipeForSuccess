@@ -119,6 +119,8 @@ If Gertrude is hoping for a good review instead, she should do a Drama.
 ## The Final Cut: What Did We Uncover? 
 
 --> summary and explain our key take aways
+It's all the same! Take Gertrude! 
+![Alt text](assets/plots/ohno.png)
 
 ## And That's a Wrap! 
 --> short and sweet conclusion and goodbye 
