@@ -21,7 +21,7 @@ Our first question was "What makes a movie successful?". But what do we mean by 
 One last technicality is adjusting the box office for inflation. This step is essential to ensure that movies from different time periods are compared fairly, as there may be economic changes over the years. We used the US inflation rates as a measure for this standardization, to convert the box office revenue in 2012 US dollars. For this, a dataset from the US Bureau of Labor Inflation Statistics was used, the description can be found at the [resources page](/ada-2024-project-authenticdataaddicts/resources/).
 
 
-## Meet Gertrude: Breaking the Mold
+## Meet Gertrude: Breaking the Mold 🍿
 At 75 years old, Gertrude has always dreamed of being an actress. "Why not?" she says. "If there is one thing I've learned in these 75 years, is that the only way to achieve your dreams is to try!" Hey, casting directors, who knows, maybe Gertrude really will be the secret sauce for your next multi-million-dollar movie! If not, she'll at least provide amazing cookies. 
 
 
@@ -85,7 +85,7 @@ For both age and height, we see that the trend among the lead actors is quite si
 
 Sure, Gertrude is on the older side, but that will just make her even more special, promise! 
 
-## Does the Genre Change the Game? Let’s Find Out!
+## Does the Genre Change the Game? Let’s Find Out! 🎬
 --> talk about the distribution of genres, and then do these studies but by genre
 
 There are all types of movies, we saw that the most common are drama and comedy, but do the genres make a difference in terms of success? That's what we'll study now!
@@ -105,7 +105,7 @@ Woow, this is interesting!
 Now we can see that Romance and Relationship is the genre which has on average the highest effect on the adjusted box office revenue.
 Maybe Gertrude should consider participating in a Romance or Relationship movie. I'm sure this would suit her well. 😊
 
-## Box Office Hit or Critics' Darling? Can a Movie Have It All?
+## Box Office Hit or Critics' Darling? Can a Movie Have It All? 🎞️
 --> to be good or to be successful 
 
 Now let's review the same plot as before, but instead of measuring the average effect a genre has on the box office revenue, let's see the effect on the average rating.
