@@ -108,7 +108,7 @@ Gertrude, I hope you're listening carefully, maybe you should go to Spain 🇪�
 ## Does the Genre Change the Game? Let's Find Out! 🎬
 
 There are all types of movies — we saw that the most common are drama and comedy — but do the genres make a difference in terms of success? That's what we'll study now!
-Let's look at the adjusted bow office depending on the genres.
+Let's look at the adjusted box-office depending on the genres.
 <iframe src="assets/plots/adjBO_vs_genres.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
 This looks good!
