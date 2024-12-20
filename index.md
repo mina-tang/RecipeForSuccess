@@ -116,7 +116,8 @@ This changes the game!
 The genre Romance and Relationship has now a slight negative effect on the average rating. 😬
 If Gertrude is hoping for a good review instead, she should do a Drama.
 
-## The Final Cut: What Did We Uncover? 
+## The Final Cut: What Did We Uncover? 🕵️‍♂️
+Looks like a lead actor's physical and demographic characteristics really don't have that much of an effect on the success of a movie. There really is no one recipe to success! Maybe the secret sauce is just originality and breaking the mold. Producers, if that's what you want, Gertrude will be the perfect fit! 
 
 --> summary and explain our key take aways
 It's all the same! Take Gertrude! 
