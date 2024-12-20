@@ -91,13 +91,13 @@ For each age at release and height group, we measure the average effect (ATE) on
 
 |                        |   ATE on average rating  |    ATE on log adjusted box office |
 |:-----------------------|-------------------------:|----------------------------------:|
-| Gender                 |                  -0.0689 |                            0.0124 |
+| Gender                 |                  -0.0689 |                           +0.0124 |
 | Height [1.52m, 1.73m]  |                  -0.0382 |                           -0.0058 |
-| Height [1.73m, 1.80m]  |                   0.0578 |                           -0.0158 |
+| Height [1.73m, 1.80m]  |                  +0.0578 |                           -0.0158 |
 | Height [1.80m, 2.16m]  |                  -0.0212 |                           -0.0175 |
-| Age at release [ 8,26] |                   0.0346 |                           -0.0055 |
-| Age at release [26,30] |                   0.0479 |                           -0.0148 |
-| Age at release [30,35] |                   0.0386 |                           -0.0285 |
+| Age at release [ 8,26] |                  +0.0346 |                           -0.0055 |
+| Age at release [26,30] |                  +0.0479 |                           -0.0148 |
+| Age at release [30,35] |                  +0.0386 |                           -0.0285 |
 | Age at release [35,40] |                  -0.0799 |                           -0.0015 |
 | Age at release [40,48] |                  -0.0873 |                           -0.0041 |
 | Age at release [48,86] |                  -0.0309 |                           -0.0434 |
