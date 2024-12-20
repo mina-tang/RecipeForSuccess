@@ -37,7 +37,7 @@ On the left, we show the average box offices for only the top 10 movies of the y
 <iframe src="assets/plots/inflation_with_regression.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 Let's try to understand theses graphs. For the top 10 movies, we see a clear trend (in both adjusted and unadjusted box office) that the average revenue becomes higher among the years.
 This means recent hit movies have a better commercial success than older hit movies. We also note that this trend can be seen but at a much smaller scale for the unadjusted box office of all movies. 
-However, the adjusted revenue shows a different trend for them. 
+However, the adjusted revenue shows the opposite trend. 
 
 Now let's dive a little deeper into components of a movie, such as its genre, language, and country of production. Feel free to take a look at the beautiful bar chart below if that sounds interesting. 
 
