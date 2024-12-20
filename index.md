@@ -85,7 +85,7 @@ For both age and height, we see that the trend among the lead actors is quite si
 
 Sure, Gertrude is on the older side, but that will just make her even more special, promise! 
 
-## Does the Genre Change the Game? Let’s Find Out! 🎬
+## Does the Genre Change the Game? Let's Find Out! 🎬
 --> talk about the distribution of genres, and then do these studies but by genre
 
 There are all types of movies, we saw that the most common are drama and comedy, but do the genres make a difference in terms of success? That's what we'll study now!
@@ -117,11 +117,17 @@ The genre Romance and Relationship has now a slight negative effect on the avera
 If Gertrude is hoping for a good review instead, she should do a Drama.
 
 ## The Final Cut: What Did We Uncover? 🕵️‍♂️
-Looks like a lead actor's physical and demographic characteristics really don't have that much of an effect on the success of a movie. There really is no one recipe to success! Maybe the secret sauce is just originality and breaking the mold. Producers, if that's what you want, Gertrude will be the perfect fit! 
+With all this precious information, Gertrude now holds the secrets to making a great movie. She's starting to think that being a director might suit her just as well as acting!
 
---> summary and explain our key take aways
-It's all the same! Take Gertrude! 
+Our analysis reveals one true thing: there is no single recipe to movie success. 
+It looks like a lead actor's physical and demographic characteristics really don't have that much of an effect on the success of a movie. 
+Maybe the secret sauce is just originality and breaking the mold. Gertrude would be the perfect fit! 
+We still uncovered some key takeaways:
+- Modern movies dominates the box office, even if older movies sometimes shine in adjusted revenue. A future movie may break all records - maybe Gertrude's!
+- Genres like Romance seems to have a good commercial effect, while Drama excels in critics. Maybe combining those two genres will lead to the next hit movie!
+- Actor characteristics have minimal impact - breaking the mold might be the winning ticket! Gertrude should still consider her actress carreer and stars in her own movie 😎
+
 ![Alt text](assets/plots/ohno.png)
 
 ## And That's a Wrap! 
---> short and sweet conclusion and goodbye 
+There is no universal formula, but a mix of creativity, boldness, and hard work seems to be the key. It's time for Gertrude to take over Hollywood! 👏
