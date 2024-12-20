@@ -106,8 +106,7 @@ Actually, none of the age nor height groups seem to have a signifiant impact on 
 So, Gertrude, believe in yourself and continue to follow your dream ! 🤗
 
 ## Does the Genre Change the Game? Let's Find Out! 🎬
---> talk about the distribution of genres, and then do these studies but by genre
-
+![1734727343082](image/index/1734727343082.png)
 There are all types of movies, we saw that the most common are drama and comedy, but do the genres make a difference in terms of success? That's what we'll study now!
 Let's look at the adjusted bow office depending on the genres.
 <iframe src="assets/plots/adjBO_vs_genres.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
@@ -126,7 +125,6 @@ Now we can see that Romance and Relationship is the genre which has on average t
 Maybe Gertrude should consider participating in a Romance or Relationship movie. I'm sure this would suit her well. 😊
 
 ## Box Office Hit or Critics' Darling? Can a Movie Have It All? 🎞️
---> to be good or to be successful 
 
 Now let's review the same plot as before, but instead of measuring the average effect a genre has on the box office revenue, let's see the effect on the average rating.
 
