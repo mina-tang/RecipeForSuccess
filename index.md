@@ -50,7 +50,7 @@ Wow, it looks like the three most common genres are drama, comedy and thriller..
   <iframe src="assets/plots/countries_count.html" width="375" height="450px" frameborder="0"></iframe>
 </div>
 
-Nope, none at all. As we could expect, the most common language is English and the two most common countries are the US and the UK. We see that French and France are also well represented in our dataset, coming right after. Getrude lives in the US and speaks English, no problems in sight! 
+Nope, none at all. As we could expect, the most common language by far is English and the two most common countries are the US and the UK. We see that French and France are also well represented in our dataset, coming right after. Getrude lives in the US and speaks English, no problems in sight! 
 
 All these movies produced, from so many countries and in so many languages, but are they any good? Well, let's check out this histogram plotting the ratings and number of votes of the movies we're studying:
 
@@ -84,10 +84,6 @@ Hang in there, we're almost done with this part! Finally, here are the distribut
 For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors. Actors on young but not too young, tall but not too tall... [mettre la diff homme/femme].
 
 Sure, Gertrude is on the older side, but that will just make her even more special, promise! 
-
-TODO explain this plot
-<iframe src="assets/plots/clusters_plot.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
-
 
 ## Does the Genre Change the Game? Let’s Find Out!
 --> talk about the distribution of genres, and then do these studies but by genre
