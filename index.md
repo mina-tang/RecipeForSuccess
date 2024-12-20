@@ -64,7 +64,7 @@ We use propensity score matching to measure the effect a country has on the aver
 <iframe src="assets/plots/matching_country_rating.html" width="750px" height="450px" frameborder="0" position="relative"></iframe>
 
 Ohhh, that's interesting! Movies in Spain have on average more than 0.6 rating points more than movies from other countries.
-Gertrude, I hope your listening carefully, maybe you should go to Spain 🇪🇸 to find out how to produce the most loved movies.
+Gertrude, I hope your listening carefully, maybe you should go to Spain 🇪🇸 to star in the most loved movies.
 
 ## Stars of the Show: It's Time to Explore the Leading Cast! 💫
 Now that we perused the movies, let's dive into their cast! Hang on tight, it's going to be a long (but worthwhile) ride as we explore their physical and demographic characteristics. 
@@ -117,6 +117,7 @@ The genre Romance and Relationship has now a slight negative effect on the avera
 If Gertrude is hoping for a good review instead, she should do a Drama.
 
 ## The Final Cut: What Did We Uncover? 
+
 --> summary and explain our key take aways
 
 ## And That's a Wrap! 
