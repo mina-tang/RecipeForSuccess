@@ -76,14 +76,35 @@ You can see that African Americans are 20.4% of all actors in movies, whereas th
 The news is not so good for Gertrude when we look at gender. Whether in leading roles or in all roles, men represent about two thirds of all actors. Pretty sure in the general population it's 50/50, just saying... 
 <iframe src="assets/plots/pie_actor_gender.html" width="750" height="550px" frameborder="0" position="relative"></iframe>
 
-Hang in there, we're almost done with this part! Finally, here are the distributions of some physical characteristics of the cast, with a comparison between lead actors and all actors:
+Hang in there, we're almost done with this part! Finally, here are the distributions of some physical characteristics of the cast, with a comparison between male and female actors:
 <div style="display: flex; justify-content: center; gap: 10px;">
   <iframe src="assets/plots/age_actor_lead.html" width="300" height="500px" frameborder="0"></iframe>
   <iframe src="assets/plots/height_actor_lead.html" width="450" height="500px" frameborder="0"></iframe>
 </div>
-For both age and height, we see that the trend among the lead actors is quite similar to the trend among all actors. Actors on young but not too young, tall but not too tall... [mettre la diff homme/femme].
 
+As expected, we see that the male actors are older and taller, whereas female actors are smaller and younger.
 Sure, Gertrude is on the older side, but that will just make her even more special, promise! 
+
+But does gender, height and age really makes a difference? 
+We did propensity score matching on different age at release and height groups.
+For each age at release and height group, we measure the average effect (ATE) on the rating and box office revenue.
+
+|                      |   ATE on average  |    ATE on log adjusted |
+|                      |           rating  |     box office revenue |
+|:---------------------|------------------:|-----------------------:|
+| Gender               |           -0.0689 |                 0.0124 |
+| Height [1.52m,1.73m] |           -0.0382 |                -0.0058 |
+| Height [1.73m,1.80m] |            0.0578 |                -0.0158 |
+| Height [1.80m,2.16m] |           -0.0212 |                -0.0175 |
+| Age [8.0,26.0]       |            0.0346 |                -0.0055 |
+| Age [26.0,30.0]      |            0.0479 |                -0.0148 |
+| Age [30.0,35.0]      |            0.0386 |                -0.0285 |
+| Age [35.0,40.0]      |           -0.0799 |                -0.0015 |
+| Age [40.0,48.0]      |           -0.0873 |                -0.0041 |
+| Age [48.0,86.0]      |           -0.0309 |                -0.0434 |
+
+Actually, none of the age nor height groups seem to have a signifiant impact on the average rating or box office revenue.
+So, Gertrude, believe in yourself and continue to follow your dream ! 🤗
 
 ## Does the Genre Change the Game? Let's Find Out! 🎬
 --> talk about the distribution of genres, and then do these studies but by genre
