@@ -34,7 +34,7 @@ Below we can visualize histograms of the runtime, box office and release date di
 That's neat! We see that most of the movies have a runtime around 100 minutes, which is actually quite short! The movies on our datasets performed quite well in terms of box-office. The vast majority of them are also quite recent, which motivates why we now adjust the box office with the inflation. 
 
 On the left, we show the average box offices for only the top 10 movies of the year, and on the right for all of them.
-<iframe src="assets/plots/inflation.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
+<iframe src="assets/plots/inflation_with_regression.html" width="750px" height="530px" frameborder="0" position="relative"></iframe>
 Let's try to understand theses graphs. For the top 10 movies, we see a clear trend (in both adjusted and unadjusted box office) that the average revenue becomes higher among the years.
 This means recent hit movies have a better commercial success than older hit movies. We also note that this trend can be seen but at a much smaller scale for the unadjusted box office of all movies. 
 However, the adjusted revenue shows a different trend for them. 
