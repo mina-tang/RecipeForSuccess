@@ -372,8 +372,14 @@ permalink: /movie-prediction/
                 // read from results
                 console.log(results)
                 document.getElementById('prediction-result-status').textContent = "";
-                document.getElementById('prediction-result').textContent = "✨ The results are in! Here's how your movie idea measures up: " + unscaleData(results.variable.data[0]);
                 document.getElementById('sub-button').disabled = false;
+
+                let rating = unscaleData(results.variable.data[0]); // Get the result
+                rating = Math.round(rating * 10) / 10; // Round to 1 decimal place
+
+                document.getElementById('prediction-result').textContent =
+                    `✨ The results are in! Your movie idea scores a stellar rating of ${rating}/10! 🌟`;
+
 
                 // unscale the result with scaler_y
 
