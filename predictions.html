@@ -352,11 +352,10 @@ permalink: /movie-prediction/
 
                 console.log("Model fetched...")
 
-
                 // Create the inference session with the model data
                 const session = await ort.InferenceSession.create(modelArrayBuffer);
 
-                const input = new ort.Tensor(new Float32Array(scaledFormData.values()), [1, 9]);
+                const input = new ort.Tensor(new Float32Array(Object.values(scaledFormData)), [1, 9]);
                 const feeds = { float_input: input };
 
                 console.log("Guessing result...")
