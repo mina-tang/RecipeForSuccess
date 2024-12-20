@@ -204,6 +204,7 @@ permalink: /movie-prediction/
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 
 <!-- JavaScript to handle form submission and prediction -->
 <script>
@@ -285,14 +286,14 @@ permalink: /movie-prediction/
             releaseYear: scaleData(parseFloat(formData.releaseYear), scaler_x.mean[1], scaler_x.scale[1]),
             budget: scaleData(parseFloat(formData.budget), scaler_x.mean[2], scaler_x.scale[2]),
 
-            actor1_height: scaleData(parseFloat(formData.actor1_height), scaler_x.mean[4], scaler_x.scale[4]),
+            actor1_height: scaleData(parseFloat(formData.actor1_height / 100.0), scaler_x.mean[4], scaler_x.scale[4]),
             actor1_age: scaleData(parseFloat(formData.actor1_age), scaler_x.mean[5], scaler_x.scale[5]),
 
-            actor2_height: scaleData(parseFloat(formData.actor2_height), scaler_x.mean[7], scaler_x.scale[7]),
+            actor2_height: scaleData(parseFloat(formData.actor2_height / 100.0), scaler_x.mean[7], scaler_x.scale[7]),
             actor2_age: scaleData(parseFloat(formData.actor2_age), scaler_x.mean[8], scaler_x.scale[8]),
 
             meanAge: scaleData(parseFloat(formData.meanAge), scaler_x.mean[9], scaler_x.scale[9]),
-            meanHeight: scaleData(parseFloat(formData.meanHeight), scaler_x.mean[10], scaler_x.scale[10]),
+            meanHeight: scaleData(parseFloat(formData.meanHeight / 100.0), scaler_x.mean[10], scaler_x.scale[10]),
             numCharacters: scaleData(parseFloat(formData.numCharacters), scaler_x.mean[11], scaler_x.scale[11]),
 
             // Map gender to 1 for male, 0 for female
@@ -337,8 +338,31 @@ permalink: /movie-prediction/
         console.log(scaledFormData)
 
         // predict using model
+        async function startInference() {
+            try {
+                // create a new session and load the model.
 
-        // unscale the result with scaler_y
+                const session = await ort.InferenceSession.create('./assets/random_forest_model.onnx');
+
+                const input = new ort.Tensor(new Float32Array(scaledFormData.values()), [1, 9]);
+                const feeds = { float_input: input };
+
+                // feed inputs and run
+                const results = await session.run(feeds);
+
+                // read from results
+                console.log(results)
+
+                // unscale the result with scaler_y
+
+            } catch (e) {
+                console.log(`failed to inference ONNX model`);
+                console.error(e);
+            }
+        }
+        startInference();
+
+
 
     });
 </script>
