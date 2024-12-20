@@ -13,12 +13,10 @@ permalink: /movie-prediction/
 
             <!-- Movie Prediction Form -->
             <form id="movie-form">
-
                 <!-- Genre -->
                 <div class="form-group">
                     <label for="genre">Genre:</label>
-
-                    <select id="choice" multiple="multiple">
+                    <select id="movie-genre" name="movie-genre" class="form-control">
                         <option value="action">Action</option>
                         <option value="comedy">Comedy</option>
                         <option value="drama">Drama</option>
@@ -28,21 +26,7 @@ permalink: /movie-prediction/
                         <option value="romance">Romance</option>
                         <option value="doc">Documentary & Non-fiction</option>
                         <option value="other">Other</option>
-
                     </select>
-                    <script type="text/javascript">
-
-                        var optionsToSelect = ['Action', 'Comedy', 'Drama', 'Horror', 'Science Fiction', 'Fantasy', 'Romance', 'Documentary & Non-fiction', 'Other'];
-                        var select = document.getElementById('choice');
-
-                        for (var i = 0, l = select.options.length, o; i < l; i++) {
-                            o = select.options[i];
-                            if (optionsToSelect.indexOf(o.text) != -1) {
-                                o.selected = true;
-                            }
-                        }
-
-                    </script>
                 </div>
 
                 <!-- Runtime -->
@@ -50,12 +34,6 @@ permalink: /movie-prediction/
                     <label for="runtime">Runtime (minutes):</label>
                     <input type="number" id="runtime" name="runtime" class="form-control" required>
                 </div>
-
-                <!-- Release Year -->
-                <!-- <div class="form-group">
-                    <label for="release-year">Release Year:</label>
-                    <input type="number" id="release-year" name="release-year" class="form-control" required>
-                </div> -->
 
                 <hr class="my-4">
 
@@ -146,3 +124,30 @@ permalink: /movie-prediction/
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript to handle form submission and prediction -->
+<script>
+    document.getElementById('movie-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Gather form data
+        const formData = {
+            genre: document.getElementById('movie-genre').value,
+            runtime: document.getElementById('runtime').value,
+            actor1: {
+                gender: document.getElementById('actor-gender-lead-actor1').value,
+                height: document.getElementById('actor-height-lead-actor1').value,
+                age: document.getElementById('actor-age-at-release-lead-actor1').value,
+                ethnicity: document.getElementById('actor-ethnicity-lead-actor1').value
+            },
+            actor2: {
+                gender: document.getElementById('actor-gender-lead-actor2').value,
+                height: document.getElementById('actor-height-lead-actor2').value,
+                age: document.getElementById('actor-age-at-release-lead-actor2').value,
+                ethnicity: document.getElementById('actor-ethnicity-lead-actor2').value
+            }
+        };
+
+        console.log(formData)
+    });
+</script>
