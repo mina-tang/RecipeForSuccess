@@ -3,61 +3,98 @@ layout: default
 title: Movie Prediction
 permalink: /movie-prediction/
 ---
-
 <div class="container my-5">
     <div class="card shadow-lg">
         <div class="card-body">
-            <h1 class="text-center mb-4">Predict Movie Rating and Box Office Revenue V5</h1>
-            <p class="text-center mb-4">Fill in the details below to predict the rating and box office revenue of your
-                movie.</p>
+            <h1 class="text-center mb-4">🎥 Lights, Camera, Prediction! 🎬</h1>
+            <p class="text-center mb-4">
+                Ever wondered if your movie idea could charm critics with sky-high ratings?
+                Enter the details below, and let’s see if your blockbuster dreams can come true! 🌟
+            </p>
 
             <!-- Movie Prediction Form -->
             <form id="movie-form">
+                <h2 class="text-center mb-3">Step Into the Director’s Chair 🎩</h2>
                 <!-- Genre -->
                 <div class="form-group">
-                    <label for="genre">Genre:</label>
+                    <label for="genre">Pick a Genre:</label>
                     <select id="movie-genre" name="movie-genre" class="form-control">
-                        <option value="action">Action</option>
-                        <option value="comedy">Comedy</option>
-                        <option value="drama">Drama</option>
-                        <option value="horror">Horror</option>
-                        <option value="sciencefiction">Science Fiction</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="romance">Romance</option>
-                        <option value="doc">Documentary & Non-fiction</option>
-                        <option value="other">Other</option>
+                        <option value="action">Action & Adventure 🚀</option>
+                        <option value="comedy">Comedy 😂</option>
+                        <option value="drama">Drama 🎭</option>
+                        <option value="horror">Horror & Thriller 👻</option>
+                        <option value="sciencefiction">Fantasy & Sci-Fi 🛸</option>
+                        <option value="fantasy">Historical 🏰</option>
+                        <option value="romance">Romance ❤️</option>
+                        <option value="crime">Crime 🕵️‍♂️</option>
+                        <option value="musical">Musical 🎶</option>
+                        <option value="other">Something Unique ✨</option>
                     </select>
                 </div>
 
                 <!-- Runtime -->
                 <div class="form-group">
-                    <label for="runtime">Runtime (minutes):</label>
-                    <input type="number" id="runtime" name="runtime" class="form-control" required>
+                    <label for="runtime">Movie Runtime (in minutes):</label>
+                    <input type="number" id="runtime" name="runtime" class="form-control" placeholder="e.g., 120"
+                        required>
+                </div>
+
+                <!-- Number of Characters -->
+                <div class="form-group">
+                    <label for="num-characters">How Many Characters Steal the Show?</label>
+                    <input type="number" id="num-characters" name="num-characters" class="form-control"
+                        placeholder="e.g., 10" required>
+                </div>
+
+                <!-- Mean Age of the Actors -->
+                <div class="form-group">
+                    <label for="mean-age">What’s the Average Age of Your Cast? (in years):</label>
+                    <input type="number" id="mean-age" name="mean-age" class="form-control" placeholder="e.g., 35"
+                        required>
+                </div>
+
+                <!-- Mean Height of the Actors -->
+                <div class="form-group">
+                    <label for="mean-height">Average Height of the Cast (in cm):</label>
+                    <input type="number" id="mean-height" name="mean-height" class="form-control"
+                        placeholder="e.g., 175" required>
+                </div>
+
+                <!-- Most Present Ethnicity -->
+                <div class="form-group">
+                    <label for="main-ethnicity">Most Represented Ethnicity in Your Cast:</label>
+                    <select id="main-ethnicity" name="main-ethnicity" class="form-control">
+                        <option value="asian">Asian</option>
+                        <option value="white">White</option>
+                        <option value="african">African</option>
+                        <option value="indigenous">Indigenous</option>
+                        <option value="hispanic">Hispanic</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
 
                 <hr class="my-4">
 
                 <!-- Lead Actor 1 -->
-                <h3 class="text-center mb-3">Lead Actor 1</h3>
+                <h3 class="text-center mb-3">Meet Your Star #1 🌟</h3>
                 <div class="form-group">
-                    <label for="actor-gender-lead-actor1">Gender:</label>
+                    <label for="actor-gender-lead-actor1">Their Gender:</label>
                     <select id="actor-gender-lead-actor1" name="actor-gender-lead-actor1" class="form-control">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
-                        <option value="other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="actor-height-lead-actor1">Height (cm):</label>
                     <input type="number" id="actor-height-lead-actor1" name="actor-height-lead-actor1"
-                        class="form-control" required>
+                        class="form-control" placeholder="e.g., 175" required>
                 </div>
 
                 <div class="form-group">
                     <label for="actor-age-at-release-lead-actor1">Age at Release:</label>
                     <input type="number" id="actor-age-at-release-lead-actor1" name="actor-age-at-release-lead-actor1"
-                        class="form-control" required>
+                        class="form-control" placeholder="e.g., 30" required>
                 </div>
 
                 <div class="form-group">
@@ -65,8 +102,9 @@ permalink: /movie-prediction/
                     <select id="actor-ethnicity-lead-actor1" name="actor-ethnicity-lead-actor1" class="form-control"
                         required>
                         <option value="asian">Asian</option>
-                        <option value="black">Black</option>
-                        <option value="caucasian">Caucasian</option>
+                        <option value="white">White</option>
+                        <option value="african">African</option>
+                        <option value="indigenous">Indigenous</option>
                         <option value="hispanic">Hispanic</option>
                         <option value="other">Other</option>
                     </select>
@@ -75,26 +113,25 @@ permalink: /movie-prediction/
                 <hr class="my-4">
 
                 <!-- Lead Actor 2 -->
-                <h3 class="text-center mb-3">Lead Actor 2</h3>
+                <h3 class="text-center mb-3">Your Co-Star Joins the Cast 🎭</h3>
                 <div class="form-group">
-                    <label for="actor-gender-lead-actor2">Gender:</label>
+                    <label for="actor-gender-lead-actor2">Their Gender:</label>
                     <select id="actor-gender-lead-actor2" name="actor-gender-lead-actor2" class="form-control">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
-                        <option value="other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="actor-height-lead-actor2">Height (cm):</label>
                     <input type="number" id="actor-height-lead-actor2" name="actor-height-lead-actor2"
-                        class="form-control" required>
+                        class="form-control" placeholder="e.g., 180" required>
                 </div>
 
                 <div class="form-group">
                     <label for="actor-age-at-release-lead-actor2">Age at Release:</label>
                     <input type="number" id="actor-age-at-release-lead-actor2" name="actor-age-at-release-lead-actor2"
-                        class="form-control" required>
+                        class="form-control" placeholder="e.g., 28" required>
                 </div>
 
                 <div class="form-group">
@@ -102,8 +139,9 @@ permalink: /movie-prediction/
                     <select id="actor-ethnicity-lead-actor2" name="actor-ethnicity-lead-actor2" class="form-control"
                         required>
                         <option value="asian">Asian</option>
-                        <option value="black">Black</option>
-                        <option value="caucasian">Caucasian</option>
+                        <option value="white">White</option>
+                        <option value="african">African</option>
+                        <option value="indigenous">Indigenous</option>
                         <option value="hispanic">Hispanic</option>
                         <option value="other">Other</option>
                     </select>
@@ -111,7 +149,9 @@ permalink: /movie-prediction/
 
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-lg btn-block mt-4"
-                    style="background-color: #404040; color: white;">Predict</button>
+                    style="background-color: #404040; color: white;">
+                    Predict Your Blockbuster! 🚀
+                </button>
             </form>
 
             <!-- Prediction Result -->
@@ -134,6 +174,10 @@ permalink: /movie-prediction/
         const formData = {
             genre: document.getElementById('movie-genre').value,
             runtime: document.getElementById('runtime').value,
+            numCharacters: document.getElementById('num-characters').value,
+            meanAge: document.getElementById('mean-age').value,
+            meanHeight: document.getElementById('mean-height').value,
+            mainEthnicity: document.getElementById('main-ethnicity').value,
             actor1: {
                 gender: document.getElementById('actor-gender-lead-actor1').value,
                 height: document.getElementById('actor-height-lead-actor1').value,
@@ -148,6 +192,26 @@ permalink: /movie-prediction/
             }
         };
 
-        console.log(formData)
+        // Display the gathered form data in the console (for testing purposes)
+        console.log(formData);
+
+        // Load the scaler_x.json
+        fetch('assets/predictor/scaler_x.json')
+            .then(response => response.json())
+            .then(scalerX => {
+                console.log('Scaler X:', scalerX);
+
+                // Get the scaler_y.json
+                return fetch('assets/predictor/scaler_y.json');
+            })
+            .then(response => response.json())
+            .then(scalerY => {
+                console.log('Scaler Y:', scalerY);
+            })
+            .catch(error => {
+                console.error('Error loading scalers:', error);
+            });
+
+        document.getElementById('prediction-result').textContent = "Prediction logic is in progress! 🎬";
     });
 </script>
